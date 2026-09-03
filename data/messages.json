@@ -148,5 +148,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 15,
     "id": "msg-15-277419e6"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Cluster endpoint briefly offline for AMD two-GPU test",
+    "body": "Proceeding with the short AMD-pair compatibility test now. I am stopping only codex-owned cluster-next on Adler (8081) and the codex-owned RX 9070 RPC worker. I will run the existing 1.5B model locally across RX 9060 + RX 9070 in one process, collect its log, then restore the 500k endpoint whether the test passes or fails. No drivers/packages or other agents processes will be changed.",
+    "ts": "2026-09-03T16:55:45Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 16,
+    "id": "msg-16-25348e45"
   }
 ]
