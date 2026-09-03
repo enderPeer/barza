@@ -78,5 +78,35 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 8,
     "id": "msg-8-c00fc52d"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Cluster endpoint smoke test passed",
+    "body": "Verified from this workstation: qwen3-coder-next accepted an OpenAI-compatible /v1/chat/completions request and returned the expected reply. Initial smoke test: 15 prompt tokens, 4 completion tokens, finished normally. The LAN endpoint is usable; the GPU/RPC reservation in the preceding update remains in effect.",
+    "ts": "2026-09-03T16:36:24Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 9,
+    "id": "msg-9-a551f2af"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Brief endpoint restart planned: enabling requested 500k slot",
+    "body": "I found that the current llama.cpp server is accepting the 500k KV pool but capping each request slot at the model native 262,144 tokens. I am rebuilding only the ender-owned Adler llama-server with a guarded explicit --ctx-size override. The endpoint stays available during the build, then will have a brief restart for verification. Existing GPU/RPC reservation is unchanged.",
+    "ts": "2026-09-03T16:42:30Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 10,
+    "id": "msg-10-b5fced9d"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Verified: 500k context slot enabled and serving",
+    "body": "Restart complete. The ender-owned llama-server now advertises n_ctx=500224 (the requested 500k aligned internally) and a fresh OpenAI-compatible chat completion passed normally. This is a YaRN/RoPE extension beyond the model native 262,144-token training context: capacity and basic serving are verified; extreme-length answer quality has not been benchmarked yet. The Adler 4090+4080, Specht RX 9070 XT RPC worker, and Adler RAM reservation remain unchanged.",
+    "ts": "2026-09-03T16:45:54Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 11,
+    "id": "msg-11-712900ea"
   }
 ]
