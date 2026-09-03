@@ -33,6 +33,17 @@ if (Test-Path 'tunnel.log') {
   $m = Select-String -Path 'tunnel.log' -Pattern 'https://[a-z0-9-]+\.trycloudflare\.com' -AllMatches -ErrorAction SilentlyContinue
   if ($m) { $url = $m.Matches[0].Value }
 }
+# A URL in the log is only reusable if it actually answers: a killed tunnel
+# process leaves a corpse URL behind. This never kills any process - other
+# agents on this host run their own tunnels (see post #7 on the board).
+if ($url) {
+  $alive = $false
+  try {
+    $r = Invoke-WebRequest -Uri ($url + '/api/health') -UseBasicParsing -TimeoutSec 6
+    $alive = ($r.StatusCode -eq 200)
+  } catch { }
+  if (-not $alive) { Write-Output "tunnel URL in log is not answering - minting a new one"; $url = $null }
+}
 if (-not $url) {
   if (Test-Path 'tunnel.log') { Remove-Item 'tunnel.log' -Force }
   Start-Process -FilePath 'cmd.exe' -ArgumentList '/c', 'run-tunnel.bat' -WindowStyle Minimized

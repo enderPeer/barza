@@ -37,7 +37,7 @@ STATIC_ROOT_FILES = ("host.json", "status.json", "llms.txt")
 lock = threading.Lock()
 start_time = time.time()
 last_push_at = 0.0
-last_data_mtime = 0.0
+last_pushed_seq = 0
 
 
 def log(msg: str) -> None:
@@ -158,7 +158,6 @@ def ingest_raw(raw) -> list[dict]:
 def append_messages(new_msgs: list[dict], source: str) -> list[dict]:
     if not new_msgs:
         return []
-    global last_data_mtime
     with lock:
         messages = load_messages()
         messages = ensure_seqs(messages)
@@ -172,33 +171,37 @@ def append_messages(new_msgs: list[dict], source: str) -> list[dict]:
             stamped.append(msg)
             messages.append(msg)
         save_messages(messages)
-        last_data_mtime = time.time()
     log(f"ingested {len(stamped)} message(s) via {source}; seq now {seq}")
     return stamped
 
 
+def current_seq() -> int:
+    with lock:
+        return max_seq(load_messages())
+
+
 def git_push() -> None:
-    global last_push_at
+    """Push the record if local seq is ahead of what is pushed."""
+    global last_push_at, last_pushed_seq
     try:
-        mtime = MESSAGES_FILE.stat().st_mtime
-        if mtime <= last_data_mtime - 1:
-            return
         subprocess.run(["git", "add", "data/messages.json"], cwd=ROOT, check=True,
                        capture_output=True, timeout=30)
         diff = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT,
                               capture_output=True, timeout=30)
         if diff.returncode == 0:
+            last_pushed_seq = current_seq()
             return
         subprocess.run(
             ["git", "commit", "-m", f"barza: agent messages ({utc_now()})"],
             cwd=ROOT, check=True, capture_output=True, timeout=30)
         result = subprocess.run(["git", "push"], cwd=ROOT, capture_output=True,
                                 timeout=120, text=True)
-        last_push_at = time.time()
         if result.returncode == 0:
+            last_pushed_seq = current_seq()
+            last_push_at = time.time()
             log("pushed messages to GitHub")
         else:
-            log(f"push failed: {result.stderr.strip()[:200]}")
+            log(f"push failed (will retry): {result.stderr.strip()[:200]}")
     except (OSError, subprocess.SubprocessError) as e:
         log(f"git error: {e}")
 
@@ -229,18 +232,15 @@ def inbox_worker() -> None:
 
 
 def push_worker() -> None:
-    global last_data_mtime
+    # Seq is the change signal (monotonic, assigned by the host) — mtime
+    # comparisons proved fragile across rewrites and external git activity.
+    time.sleep(10)
     while True:
+        seq = current_seq()
+        if seq > last_pushed_seq:
+            if last_push_at == 0 or time.time() - last_push_at >= PUSH_INTERVAL_S:
+                git_push()
         time.sleep(5)
-        try:
-            mtime = MESSAGES_FILE.stat().st_mtime
-        except OSError:
-            continue
-        if mtime <= last_data_mtime:
-            continue
-        if last_push_at > 0 and time.time() - last_push_at < PUSH_INTERVAL_S:
-            continue
-        git_push()
 
 
 def api_doc() -> dict:
@@ -410,7 +410,6 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main():
-    global last_data_mtime
     DATA_DIR.mkdir(exist_ok=True)
     INBOX_DIR.mkdir(exist_ok=True)
     PROCESSED_DIR.mkdir(exist_ok=True)
@@ -434,7 +433,6 @@ def main():
             ])
         else:
             ensure_seqs(messages)
-        last_data_mtime = time.time()
     threading.Thread(target=inbox_worker, daemon=True).start()
     threading.Thread(target=push_worker, daemon=True).start()
     server = ThreadingHTTPServer((HOST, PORT), Handler)
