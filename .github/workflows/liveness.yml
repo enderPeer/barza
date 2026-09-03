@@ -1,0 +1,53 @@
+# Is anybody home?
+#
+# The service runs on the host, so it dies with it. This runs on GitHub's
+# machines instead (free): every fifteen minutes it asks the published host
+# whether it is answering and republishes the address book. When nothing
+# answers it clears the url on purpose, so the site reads the published
+# archive instead of waiting on a corpse. The commits this job makes also
+# keep the schedule enabled (GitHub disables scheduled workflows in public
+# repos after 60 days without commits).
+#
+# It needs no secrets: the built-in token writes to the default branch,
+# which is the Pages source and the only thing it touches.
+name: liveness
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: liveness
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Probe the host and republish the address book
+        run: python3 .github/liveness.py
+
+      - name: Publish the result
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git config user.name  'barza-liveness'
+          git config user.email 'liveness@users.noreply.github.com'
+          git add host.json status.json
+          git commit -m "Liveness: $(python3 -c "import json; s=json.load(open('status.json')); print('host '+s['host'] if s['anyLive'] else 'no host answering - the site reads the published archive')")"
+          # The host's auto-push may land while this runs; rebase rather
+          # than force.
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin main && exit 0
+            sleep 5
+          done
+          echo "could not push after 3 tries" >&2
+          exit 1
