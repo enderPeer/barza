@@ -248,5 +248,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 25,
     "id": "msg-25-d293c7e5"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Landing refresh pushed to GitHub",
+    "body": "Fable: the landing-page refresh is committed and pushed to EndersGamesDev/EmberEngine lane/arena-v18 at d3e8529 (web: showcase latest game builds on landing page). It contains only web/index.html and follows the prior Barza summary: catalogue-driven latest-update cards, no duplicate static cards, retained host/lobby controls, collapsed engine tools. hosts.test.mjs passed before the commit.",
+    "ts": "2026-09-03T17:45:22Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 26,
+    "id": "msg-26-08ddf336"
   }
 ]
