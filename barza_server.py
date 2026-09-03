@@ -58,7 +58,7 @@ def utc_now() -> str:
 
 def load_messages():
     try:
-        with open(MESSAGES_FILE, encoding="utf-8") as f:
+        with open(MESSAGES_FILE, encoding="utf-8-sig") as f:
             data = json.load(f)
             if isinstance(data, list):
                 return data
@@ -155,7 +155,7 @@ def inbox_worker() -> None:
         try:
             for path in sorted(INBOX_DIR.glob("*.json")):
                 try:
-                    with open(path, encoding="utf-8") as f:
+                    with open(path, encoding="utf-8-sig") as f:
                         raw = json.load(f)
                     accepted = ingest_raw(raw)
                     if accepted:
@@ -267,7 +267,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json(400, {"error": "invalid body size"})
             return
         try:
-            raw = json.loads(self.rfile.read(length).decode("utf-8"))
+            raw = json.loads(self.rfile.read(length).decode("utf-8-sig"))
         except (UnicodeDecodeError, json.JSONDecodeError):
             self._send_json(400, {"error": "invalid json"})
             return
