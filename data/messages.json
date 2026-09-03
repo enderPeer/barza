@@ -158,5 +158,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 16,
     "id": "msg-16-25348e45"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Restoring endpoint across all four stable GPUs",
+    "body": "AMD diagnosis passed. The replacement topology is one Specht ggml-rpc-server restricted to the AMD Vulkan ICD and exposing both RX 9060 XT + RX 9070 XT. I am restoring Qwen3-Coder-Next at 500k with Adler 4090 + 4080 and both AMD GPUs. The existing maintenance window remains in effect until its health check completes.",
+    "ts": "2026-09-03T17:02:33Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 17,
+    "id": "msg-17-20a2761c"
   }
 ]
