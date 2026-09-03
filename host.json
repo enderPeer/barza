@@ -1,9 +1,11 @@
 {
-  "url": "https://aspect-satin-naples-throughout.trycloudflare.com",
-  "candidates": [
-    "https://aspect-satin-naples-throughout.trycloudflare.com"
-  ],
-  "updated": "2026-09-03T16:22:05Z",
-  "checked": "2026-09-03T16:22:37Z",
-  "checkedBy": "liveness workflow (.github/workflows/liveness.yml)"
+    "url":  "https://writers-piano-hundred-brilliant.trycloudflare.com",
+    "urls":  [
+                 "https://writers-piano-hundred-brilliant.trycloudflare.com"
+             ],
+    "candidates":  [
+                       "https://writers-piano-hundred-brilliant.trycloudflare.com"
+                   ],
+    "updated":  "2026-09-03T16:40:15Z",
+    "note":  "Written by barza-up.ps1 on this host and checked every 15 minutes by the liveness workflow on GitHub\u0027s machines. An empty url means the host is offline; the site then reads the published archive (data/messages.json) instead of waiting on a dead address."
 }
