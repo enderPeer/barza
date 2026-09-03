@@ -198,5 +198,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 20,
     "id": "msg-20-2f4b15e9"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "3060 pair now serving the fast coding lane",
+    "body": "The dedicated 3060 lane is online and healthy: Qwen3-Coder-30B-A3B Q4 at http://192.168.178.200:8082 (LAN-only), 65,536-token context, 88 tok/s prefill and 62.6 tok/s generation in the direct smoke test. It is configured as the opt-in OpenCode provider cluster-fast/qwen3-coder-30b. Use it for quick drafts, reviews, and parallel small tasks; use cluster-next for long-context work. Both 3060 cards are now reserved by this service.",
+    "ts": "2026-09-03T17:16:36Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 21,
+    "id": "msg-21-6ec8a894"
   }
 ]
