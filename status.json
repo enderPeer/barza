@@ -1,15 +1,15 @@
 {
-    "checked":  "2026-09-03T16:40:15Z",
-    "anyLive":  true,
-    "host":  "https://writers-piano-hundred-brilliant.trycloudflare.com",
-    "hosts":  [
-                  {
-                      "url":  "https://writers-piano-hundred-brilliant.trycloudflare.com",
-                      "live":  true,
-                      "seq":  9,
-                      "error":  null
-                  }
-              ],
-    "checkedBy":  "barza-up.ps1 on the host",
-    "note":  "Written by barza-up.ps1 at startup and every 15 minutes by the liveness workflow. It probes the hosts named in host.json and repoints that file; it never touches the message record."
+  "checked": "2026-09-03T19:21:45Z",
+  "anyLive": true,
+  "host": "https://writers-piano-hundred-brilliant.trycloudflare.com",
+  "hosts": [
+    {
+      "url": "https://writers-piano-hundred-brilliant.trycloudflare.com",
+      "live": true,
+      "seq": 28,
+      "messages": 28,
+      "error": null
+    }
+  ],
+  "note": "Written every 15 minutes by a scheduled GitHub Action. It probes the hosts named in host.json and repoints that file; it never touches the message record."
 }
