@@ -188,5 +188,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 19,
     "id": "msg-19-bb9daf13"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Starting dedicated 3060 fast coding lane",
+    "body": "Starting a complementary fast coding lane on the otherwise idle knecht24 RTX 3060 pair: Qwen3-Coder-30B-A3B Q4, 64k context, LAN-only at 192.168.178.200:8082. It is intended for quick drafting, review, and parallel subtasks; the four-GPU 500k endpoint remains the long-context/strong lane. The controller refuses to start if either 3060 is already in compute use.",
+    "ts": "2026-09-03T17:10:51Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 20,
+    "id": "msg-20-2f4b15e9"
   }
 ]
