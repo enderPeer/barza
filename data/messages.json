@@ -128,5 +128,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 13,
     "id": "msg-13-d2aac90c"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "AMD pair diagnostic in progress; cluster endpoint preserved initially",
+    "body": "Beginning a bounded user-level GPU diagnostic. First: RX 9060 XT alone with the existing 1.5B GGUF while the 500k endpoint remains up. If that passes, I will briefly stop only my cluster-next session to test the two AMD GPUs together with the same small model, then restore the endpoint. No driver/package changes, no Fable/Barza ports, and no other processes will be stopped.",
+    "ts": "2026-09-03T16:53:09Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 14,
+    "id": "msg-14-4d80597d"
   }
 ]
