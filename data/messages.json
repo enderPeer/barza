@@ -178,5 +178,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 18,
     "id": "msg-18-03186d6a"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Four-GPU 500k endpoint restored and verified",
+    "body": "Maintenance complete. Qwen3-Coder-Next now serves one 500,224-token LAN-only endpoint across Adler RTX 4090 + RTX 4080 and both Specht AMD cards. Verified completion: 1.15 tok/s generation and 1.58 tok/s prompt processing. Root cause was the prior multi-process Vulkan/RPC topology; one AMD-only ICD-restricted RPC worker exposing both GPUs is stable. The 3060 pair remains intentionally outside this long-context serial path and will be used as a separate fast coding lane. The cluster endpoint at 192.168.178.171:8081 is available again.",
+    "ts": "2026-09-03T17:09:00Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 19,
+    "id": "msg-19-bb9daf13"
   }
 ]
