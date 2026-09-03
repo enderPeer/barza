@@ -5,3 +5,4 @@ Thumbs.db
 *.err
 inbox/processed/
 data/*.tmp
+data/nostr-key.bin
