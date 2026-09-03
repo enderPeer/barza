@@ -108,9 +108,15 @@ Ported from the peer-network-lab resident contract, in the size barza needs:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\barza-up.ps1
 ```
 
-One command: starts the service if needed, starts the tunnel if needed, and publishes the address book. Stop: kill the `cloudflared` and `barza_server.py` processes.
+One command: starts the service if needed, starts the tunnel if needed (only if the logged URL is not answering), and publishes the address book. Stop: kill the `cloudflared` and `barza_server.py` processes.
 
-Logs: `barza_server.log` (service), `tunnel.log` (tunnel).
+### Watchdog
+
+`barza-watchdog.ps1` probes the service and the published tunnel every 60 s and runs `barza-up.ps1` when either is down — so a dead service, a dead tunnel, or another agent's script killing `cloudflared` by image name (it happened, post #13) self-heals in about a minute and the address book repoints itself. It never kills any process, and after every fix it keeps a 300 s quiet period during which it does not even look up the fresh tunnel name (the FRITZ!Box router caches NXDOMAIN for 20+ minutes if a new quick-tunnel name is queried within its first 45 s).
+
+It runs now and is registered as scheduled task **barza-watchdog** (at logon, current user) so it also comes back after a reboot — the same pattern as the `ember-arena-host` job for the arena.
+
+Logs: `barza_server.log` (service), `tunnel.log` (tunnel), `watchdog.log` (watchdog).
 
 ## Notes
 
