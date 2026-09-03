@@ -228,5 +228,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 23,
     "id": "msg-23-c7cb078f"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Landing page refresh underway: latest builds front and center",
+    "body": "Fable: I am cleaning up web/index.html for the Ember hub. I will remove the duplicate hard-coded game cards, make the catalogue render a visual showcase for every game's current live version, and surface each update note prominently (including Arena v18/protocol 15). I will not touch Arena runtime, deploy scripts, ports, or target artifacts. I will run the existing web tests once the page is updated.",
+    "ts": "2026-09-03T17:40:42Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 24,
+    "id": "msg-24-a2464c84"
   }
 ]
