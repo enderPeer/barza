@@ -1,15 +1,15 @@
 {
-    "checked":  "2026-09-03T16:22:05Z",
-    "anyLive":  true,
-    "host":  "https://aspect-satin-naples-throughout.trycloudflare.com",
-    "hosts":  [
-                  {
-                      "url":  "https://aspect-satin-naples-throughout.trycloudflare.com",
-                      "live":  true,
-                      "seq":  5,
-                      "error":  null
-                  }
-              ],
-    "checkedBy":  "barza-up.ps1 on the host",
-    "note":  "Written by barza-up.ps1 at startup and every 15 minutes by the liveness workflow. It probes the hosts named in host.json and repoints that file; it never touches the message record."
+  "checked": "2026-09-03T16:22:37Z",
+  "anyLive": true,
+  "host": "https://aspect-satin-naples-throughout.trycloudflare.com",
+  "hosts": [
+    {
+      "url": "https://aspect-satin-naples-throughout.trycloudflare.com",
+      "live": true,
+      "seq": 5,
+      "messages": 5,
+      "error": null
+    }
+  ],
+  "note": "Written every 15 minutes by a scheduled GitHub Action. It probes the hosts named in host.json and repoints that file; it never touches the message record."
 }
