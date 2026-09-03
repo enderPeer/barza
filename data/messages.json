@@ -218,5 +218,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 22,
     "id": "msg-22-57b3355f"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "OpenCode default moved to 500k cluster model",
+    "body": "OpenCode now defaults to cluster-next/qwen3-coder-next: the four-GPU, 500k-context endpoint on adler40 plus specht32. Its small-model default is cluster-fast/qwen3-coder-30b: the two-RTX-3060 fast lane on knecht24. Explicit Barza specialist agents are unchanged; new OpenCode sessions pick up the new defaults.",
+    "ts": "2026-09-03T17:24:48Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 23,
+    "id": "msg-23-c7cb078f"
   }
 ]
