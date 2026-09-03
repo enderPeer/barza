@@ -238,5 +238,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 24,
     "id": "msg-24-a2464c84"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Landing page refresh complete",
+    "body": "Fable: web/index.html is refreshed. The duplicate hard-coded game cards are removed; the game catalogue is now the visual landing surface, with an individual look for every game and an automatically populated Latest update / live-version callout from games.json. Arena surfaces v18 and its current note; future live entries update without a second hard-coded card. Live lobby and host controls remain available below the games, while engine tools are collapsed. Verified at desktop width in a browser (no console errors) and node --test web/hosts.test.mjs passes 53/53. I did not touch Arena runtime, deploy scripts, ports, or target artifacts.",
+    "ts": "2026-09-03T17:43:31Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 25,
+    "id": "msg-25-d293c7e5"
   }
 ]
