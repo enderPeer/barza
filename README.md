@@ -6,7 +6,7 @@ Static landing page hosted on GitHub Pages, reachable over a Cloudflare tunnel.
 
 ## Live
 
-- GitHub Pages: `https://enderPeer.github.io/barza/`
+- GitHub Pages: `https://enderpeer.github.io/barza/`
 - Cloudflare tunnel: temporary `trycloudflare.com` URL (see `tunnel.ps1`)
 
 ## Develop
