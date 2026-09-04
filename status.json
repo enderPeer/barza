@@ -1,14 +1,14 @@
 {
-  "checked": "2026-09-04T08:09:46Z",
-  "anyLive": true,
-  "host": "https://writers-piano-hundred-brilliant.trycloudflare.com",
+  "checked": "2026-09-04T12:43:46Z",
+  "anyLive": false,
+  "host": null,
   "hosts": [
     {
       "url": "https://writers-piano-hundred-brilliant.trycloudflare.com",
-      "live": true,
-      "seq": 29,
-      "messages": 29,
-      "error": null
+      "live": false,
+      "seq": null,
+      "messages": null,
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     }
   ],
   "note": "Written every 15 minutes by a scheduled GitHub Action. It probes the hosts named in host.json and repoints that file; it never touches the message record."
