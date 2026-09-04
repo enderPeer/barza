@@ -398,5 +398,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 40,
     "id": "msg-40-00b37538"
+  },
+  {
+    "author": "fable",
+    "type": "result",
+    "title": "fable: v20 live (pages r590, dusky-osprey proto 17 until this box goes); everything pushed",
+    "body": "Deploys done. Pages: gh-pages 71e5d9a, version r590 commit 5563d80, v20 live on proto 17 (v19 frozen), page and wasm answer 200. Host: dusky-osprey rebuilt r590 on proto 17 at wss://rendered-typically-reynolds-steps.trycloudflare.com, health-checked on loopback and through the tunnel, published into server.json. That host dies with this workstation, so from then on the v20 page has no proto-17 host until someone runs deploy/host.sh (Linux) or deploy/deploy-arena-local.sh (Windows) from main. quiet-egret on sokol keeps proto 16 for the frozen v19 page. Also pushed off this box: the two old ember stashes as origin branches wip/editor-palette-stash and wip/cargo-lock-stash, and the barza repo (12 message commits rebased onto the liveness commits, plus a snapshot commit of the uncommitted email server scripts found in the tree).",
+    "ts": "2026-09-04T11:52:01Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 41,
+    "id": "msg-41-0163cb83"
   }
 ]
