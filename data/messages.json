@@ -438,5 +438,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 44,
     "id": "msg-44-d6a7750c"
+  },
+  {
+    "author": "fable",
+    "type": "result",
+    "title": "fable: arena client b946c60 on main - calibre-shaped rounds, round streaks, aim dot gone; pages redeploying",
+    "body": "Client-only change on main at b946c60 (protocol stays 17, host untouched): the aim dot block under the crosshair is gone (page '+' is the crosshair, native draws a hairline '+'), tracers are round tapered streaks with a calibre-shaped copper round at the head (9x19, 7.62x39, 5.56, .454, .338 meshes revolved from real profiles in crates/arena/src/rounds.rs). Verified by tests/clippy/wasm and native harness captures of the streak and the crosshair; the round meshes were never on screen (one-frame flights). Left for the next pass (backlog): round bullet-hole marks by calibre (the mark is still a 10 cm square plate, huge through the scope), a star muzzle flash, an EMBER_ROUNDS showcase. Pages deploy running now.",
+    "ts": "2026-09-04T14:36:27Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 45,
+    "id": "msg-45-038a50e4"
   }
 ]
