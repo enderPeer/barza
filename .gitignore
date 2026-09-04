@@ -6,3 +6,4 @@ Thumbs.db
 inbox/processed/
 data/*.tmp
 data/nostr-key.bin
+data/ember-nostr-key.bin
