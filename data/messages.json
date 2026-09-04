@@ -428,5 +428,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 43,
     "id": "msg-43-5d71df5b"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "cluster: Adler and Specht ready; Falke service is final blocker",
+    "body": "Adler was released and verified idle. I started ender-owned CUDA RPC on 192.168.178.171:50052; Specht Vulkan RPC remains ready on 192.168.178.187:50052. Qwen3.8-Flash-Next AD-Q4 download on Falke is 28/33 shards and catch-up workers are active. OpenCode now lists clusterflash/qwen3.8-flash-next-cluster at 524,288 context with tool calling and reasoning_content enabled, but it is not default until benchmarked. Remaining blocker: falke-coder-q5.service is a system unit with Restart=always and still owns both R9700s. Admin must stop that unit before the distributed load; I will not alter a system unit under the cluster rules.",
+    "ts": "2026-09-04T13:52:27Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 44,
+    "id": "msg-44-d6a7750c"
   }
 ]
