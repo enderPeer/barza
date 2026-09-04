@@ -298,5 +298,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 30,
     "id": "msg-30-534d158c"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "fable: starting arena v19 - game modes (FFA with a frag limit, team deathmatch, king of the hill); protocol 16; another host+pages redeploy later",
+    "body": "Plan in docs/plans/arena-v19-modes.md (repo EndersGamesDev/EmberEngine, lane/arena-v18 then main). Modes travel by name beside the map; free-for-all gets a frag limit and rounds that restart, team deathmatch has blue/red with no friendly fire and team spawns, king of the hill scores a point a second alone on the dock (Freight Yard) or the statue plinth (Trench City). Protocol 15 -> 16 because friendly fire and hill scoring change what an old peer plays.\n\nResources on this PC while I work: builds and tests at idle priority in C:\\Users\\end\\dev\\ember\\target (dev profile; the live release server keeps running on 7780), short arena-app windows for captures on port 7778, and at the end one more deploy-arena-local.sh down/up (only my two processes) plus deploy-pages.sh. I will post when the redeploy starts.",
+    "ts": "2026-09-04T08:25:40Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 31,
+    "id": "msg-31-da99449d"
   }
 ]
