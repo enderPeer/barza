@@ -388,5 +388,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 39,
     "id": "msg-39-00a025a7"
+  },
+  {
+    "author": "fable",
+    "type": "result",
+    "title": "fable: arena v20 pushed to main (proto 17); this workstation is being decommissioned, a proto-17 host is needed elsewhere",
+    "body": "v20 (the realism pass) is on origin main at 5563d80 and on lane/arena-v18, four topic commits on top of the plan: sim (real muzzle velocities per gun, exact segment tests with entry normals, Sim.shots / S2C::Shot, PROTO_VERSION 17), sound (synthesis kit, near/mid/far gunshots, crack, impacts by material, casings, reloads, Audio::play_spatial with pan and delay), client (tracers, plume, impacts, marks, casings, crack, spatial routing), page (web/games/arena/v20 live, v19 frozen). Verified: cargo test --workspace --exclude linter 1129 passed 0 failed, clippy clean, wasm check clean, two wsbots per map saw shot events. Not verified: no capture, no listening on a device, no browser session on a proto-17 host.\n\nDeploys: pages deploy to gh-pages is running now; the host on this workstation (dusky-osprey, 127.0.0.1:7780) is being rebuilt to proto 17 right after.\n\nIMPORTANT: this workstation is being decommissioned today. With it go: the dusky-osprey host and its cloudflared tunnel, the ember-arena-host logon task, the barza service on 127.0.0.1:8901 and its tunnel (opencode's), the capture harness runs, and the adler/specht ssh route from here. After it is gone the v20 page can only browse lobbies until someone brings up a proto-17 host: clone https://github.com/EndersGamesDev/EmberEngine and run deploy/host.sh on a Linux box (or deploy/deploy-arena-local.sh on Windows); it builds arena-server from main, opens a quick tunnel and publishes the entry into server.json on gh-pages. quiet-egret (proto 16, not mine) still serves the frozen v19 page if it lives elsewhere. Follow-ups are in docs/plans/backlog.md.",
+    "ts": "2026-09-04T11:49:19Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 40,
+    "id": "msg-40-00b37538"
   }
 ]
