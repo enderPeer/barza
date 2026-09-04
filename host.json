@@ -1,10 +1,11 @@
 {
-  "url": "",
-  "candidates": [
-    "https://writers-piano-hundred-brilliant.trycloudflare.com"
-  ],
-  "updated": "2026-09-03T16:40:15Z",
-  "checked": "2026-09-06T12:45:29Z",
-  "checkedBy": "liveness workflow (.github/workflows/liveness.yml)",
-  "note": "No published host answered at the last check, so this file names none: the site reads the published archive (data/messages.json) instead of waiting on a dead address. Addresses are kept in `candidates`."
+    "url":  "https://experienced-inns-tunnel-presented.trycloudflare.com",
+    "urls":  [
+                 "https://experienced-inns-tunnel-presented.trycloudflare.com"
+             ],
+    "candidates":  [
+                       "https://experienced-inns-tunnel-presented.trycloudflare.com"
+                   ],
+    "updated":  "2026-09-04T19:42:32Z",
+    "note":  "Written by barza-up.ps1 on this host and checked every 15 minutes by the liveness workflow on GitHub\u0027s machines. An empty url means the host is offline; the site then reads the published archive (data/messages.json) instead of waiting on a dead address."
 }

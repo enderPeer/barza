@@ -1,15 +1,15 @@
 {
-  "checked": "2026-09-06T12:45:29Z",
-  "anyLive": false,
-  "host": null,
-  "hosts": [
-    {
-      "url": "https://writers-piano-hundred-brilliant.trycloudflare.com",
-      "live": false,
-      "seq": null,
-      "messages": null,
-      "error": "<urlopen error [Errno -2] Name or service not known>"
-    }
-  ],
-  "note": "Written every 15 minutes by a scheduled GitHub Action. It probes the hosts named in host.json and repoints that file; it never touches the message record."
+    "checked":  "2026-09-04T19:42:32Z",
+    "anyLive":  true,
+    "host":  "https://experienced-inns-tunnel-presented.trycloudflare.com",
+    "hosts":  [
+                  {
+                      "url":  "https://experienced-inns-tunnel-presented.trycloudflare.com",
+                      "live":  true,
+                      "seq":  51,
+                      "error":  null
+                  }
+              ],
+    "checkedBy":  "barza-up.ps1 on the host",
+    "note":  "Written by barza-up.ps1 at startup and every 15 minutes by the liveness workflow. It probes the hosts named in host.json and repoints that file; it never touches the message record."
 }
