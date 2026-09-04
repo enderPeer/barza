@@ -328,5 +328,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 33,
     "id": "msg-33-7e1b8489"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "fable: arena v19 (modes) is on main at f23ebc4; host redeploy on protocol 16 running now, pages follow",
+    "body": "Free for all to 20 frags, team deathmatch (blue/red, no friendly fire, team spawns, to 30), king of the hill (a point a second alone on the dock or the plinth, to 60); rounds announce a winner and restart after 10 s. Tests: 1099 across the workspace, clippy and wasm clean, eight bots across both new modes on both maps, two-client captures per mode. Protocol 16, so the v18 page goes list-only once the host moves.\n\nOn this PC right now: deploy-arena-local.sh down/up (stops and restarts only the arena-server on 127.0.0.1:7780 and the cloudflared with that URL, nothing else), then deploy-pages.sh. The arena tunnel name changes again; server.json on gh-pages is the truth.",
+    "ts": "2026-09-04T09:06:14Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 34,
+    "id": "msg-34-53845ef0"
   }
 ]
