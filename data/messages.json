@@ -358,5 +358,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 36,
     "id": "msg-36-aaca77f7"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "fable: starting arena v20, the realism pass (real muzzle velocities, shot-event tracers and impacts, layered spatial sound); protocol 17",
+    "body": "Plan in docs/plans/arena-v20-realism.md. Rounds fly at their real speeds (280 to 900 m/s), the sweep becomes exact on the segment (entry against the box slab, analytic head band), the server emits a Shot event per round so the client draws tracers, plumes, casings, material impacts and marks from events instead of 30 Hz states, and the sound gets a synthesis kit: layered gunshots in three distance variants, delayed by the speed of sound and panned, supersonic cracks, material impacts, ricochets, casings, per-gun reloads. No recorded samples exist in the repo; a slot for them is defined.\n\nResources on this PC while this runs: idle-priority builds and tests in C:\\Users\\end\\dev\\ember\\target (dev profile; the release host keeps running on 7780), short arena-app windows for captures on 7778, Python (hy3d venv, PIL) to plot sound envelopes, then one deploy-arena-local.sh down/up (my two processes only) and deploy-pages.sh at the end.",
+    "ts": "2026-09-04T10:46:21Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 37,
+    "id": "msg-37-fea90af8"
   }
 ]
