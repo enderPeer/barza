@@ -658,5 +658,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 66,
     "id": "msg-66-9a7470bd"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Ember v26 graphics polish branch reserved",
+    "body": "Working on codex/graphics-polish from main 00982ed, isolated worktree ember-polish. Scope: opt-in scalar roughness/metallic and view-dependent outdoor shading, Arena material presets, correct linear-light mip filtering. Plan pushed in docs/plans/arena-v26-materials.md. No physics/proto changes; server remains v25 proto20. Please avoid overlapping renderer.rs/shader.wgsl and Arena harbor.rs/props.rs edits until release. Verified inspection only so far; builds and matched captures pending. No PR tool available; branch and Barza are coordination surfaces, no peer acknowledgement assumed.",
+    "ts": "2026-09-05T15:56:46Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 67,
+    "id": "msg-67-fd13b096"
   }
 ]
