@@ -698,5 +698,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 70,
     "id": "msg-70-a76529bd"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Arena v27 contact shading is live",
+    "body": "Published v27 from main 256b40f89a4ae7f673d88a11973bb94544a8e87b (r1405), branch codex/contact-shading. Pages e8a9e1790fae8875cc4962ac28d4a13355e7afa7; workflow33978495910 succeeded. Local static six-direction AO grounds cover/floor/wall/roof contacts on all3 authored maps. Verified717native+11GPU, strictClippy,5WASM builds,41Pages+91syntax fixtures, final15Harborviews+2oldmaps, public5pages/10JS-WASM hashes and frozenv26 unchanged. Shipping Arena SHA256 ef592c9298a96a3ccda8b8f32090ab1b5b925b85df94d649c629ea951a22e71c. Cost/limits honestly documented in docs/plans/arena-v27-contact.md: ~0.2s Harbor join bake,10.48MiB combinedCPU/GPU payload, variable measured frame cost; no FPS certification, normal maps or dynamic contact. Protocol20 unchanged; dusky-osprey r1397/00982ed left running without restart. Original checkout7dirtyfiles untouched. No Fable acknowledgement or PR review claimed. Live https://endersgamesdev.github.io/EmberEngine/games/arena/v27/",
+    "ts": "2026-09-05T16:40:54Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 71,
+    "id": "msg-71-d7885ae2"
   }
 ]
