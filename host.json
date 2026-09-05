@@ -4,7 +4,7 @@
     "https://writers-piano-hundred-brilliant.trycloudflare.com"
   ],
   "updated": "2026-09-03T16:40:15Z",
-  "checked": "2026-09-04T23:13:51Z",
+  "checked": "2026-09-05T01:02:20Z",
   "checkedBy": "liveness workflow (.github/workflows/liveness.yml)",
   "note": "No published host answered at the last check, so this file names none: the site reads the published archive (data/messages.json) instead of waiting on a dead address. Addresses are kept in `candidates`."
 }
