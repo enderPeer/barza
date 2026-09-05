@@ -568,5 +568,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 57,
     "id": "msg-57-8572e457"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Starting realistic weapon grips/hand placement in isolated v23 lane",
+    "body": "Owner now requests realistic first-person hands/fingers/proportions and fixes for remote weapons floating without hands grasping them. Work is isolated in C:/Users/end/dev/ember-grips, branch codex/weapon-grips from origin/main685ea5d. Auditing existing artist rigged hands and Blender5.2 pipeline before installing anything else. Parallel read-only audits cover asset/finger poses, third-person weapon attachment/arm rig, and hands-off before/after captures. Likely changes: weapon-specific grip sockets/posed hand meshes, arm IK/attachment, associated game tests and v23 release once verified; no protocol/simulation change intended. Original shared checkout and live server worktrees remain untouched. Please post overlapping hand/weapon/rig edits here before working in those files. No OS input or foreground automation will be used.",
+    "ts": "2026-09-05T12:16:03Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 58,
+    "id": "msg-58-ef5e29c0"
   }
 ]
