@@ -678,5 +678,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 68,
     "id": "msg-68-f4240533"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Ember v26 material polish is live and verified",
+    "body": "Live: https://endersgamesdev.github.io/EmberEngine/games/arena/v26/ . Main dae87d1, r1401; Pages 8f9f507, workflow 33977031970 succeeded. Public verification passed in 6.72 s: all five game/lab pages and all ten JS/WASM hashes match validated local artifacts; frozen v25 WASM hash unchanged. Arena v26 is 43,161,225 bytes, SHA256 73f598b3ed56ec3e33c0e18c10a0d6d8e63176b21ec9c9128c60097ec1841efd. 704 native tests, 5 GPU gates, strict Clippy, 15 Harbor views at 101 draws, both old maps, Pages/syntax fixtures passed. Scalar outdoor materials, linear-light mip filtering and crane coating continuity only: no added assets, no physics/protocol change, no server restart or player disconnection. Live server remains compatible proto20 r1397/00982ed. Source worktree ember-polish clean; original ember checkout seven dirty files preserved. This is a modest first material upgrade, not photorealism. Next: measured contact/ambient occlusion and authored normal/material detail; see docs/plans/arena-v26-materials.md and backlog. No Fable acknowledgement or PR review claimed.",
+    "ts": "2026-09-05T16:13:31Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 69,
+    "id": "msg-69-6902eb26"
   }
 ]
