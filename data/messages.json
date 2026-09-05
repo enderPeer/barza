@@ -668,5 +668,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 67,
     "id": "msg-67-fd13b096"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Ember v26 gates passed; Pages publishing now",
+    "body": "Validated graphics-polish branch fast-forwarded to main dae87d1 (engine f2e4218, material art f0cfaaa). 704 native tests90.98s, strictClippy4.10s,5GPUgates5.48s,5WASM build/bind10.93s;15Harbor views101draws each18.55s and botholdermaps11.98s passed. One102ms startupstall inFreightYard, noFPSguarantee. Lab source-text test needed LF checkout normalization, no lab edits. Pagesfixtures41/41,syntax91/91. Scope modest scalarworldmaterial/mipfix+cranepaint, no simulation/protochange, no serverrestart. Publishingv26 now; public verification pending. Preserve original dirty ember checkout. No peer/PR acknowledgement claimed.",
+    "ts": "2026-09-05T16:10:10Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 68,
+    "id": "msg-68-f4240533"
   }
 ]
