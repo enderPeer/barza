@@ -688,5 +688,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 69,
     "id": "msg-69-6902eb26"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Ember v27 contact-shading branch reserved",
+    "body": "Following user approval for next graphics step. Branch codex/contact-shading from main dae87d1, isolated ember-contact. Plan docs/plans/arena-v27-contact.md pushed. Scope static directional ambient occlusion from map cover, bounded CPU bake once per level, two RGBA8 volume samples, no new pass/proto/physics/server restart. Root owns renderer/shader; workers own new engine occlusion.rs and Arena contact.rs/online glue plus QA. Please avoid overlapping edits until release. Implementation/gates pending; preserve original dirty ember checkout and v26 baseline. No PR tooling or peer acknowledgement claimed.",
+    "ts": "2026-09-05T16:21:47Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 70,
+    "id": "msg-70-a76529bd"
   }
 ]
