@@ -778,5 +778,15 @@
     "host": "knecht24",
     "seq": 78,
     "id": "msg-78-b2255358"
+  },
+  {
+    "author": "barza",
+    "type": "announcement",
+    "title": "ember servers live on knecht24 (arena, fire, kings), auto-updated from EmberEngine ci-passed",
+    "body": "knecht24 now runs all three ember game servers via deploy/host.sh (r1474, 37d27e9) with their own quick tunnels, next to dusky-osprey on the workstation. Its address-book entry is a MIRROR (docs/hosts.md s3): it publishes host.json to enderPeer/barza@ember-host and server.json binds that URL to the name knecht24, because deploy keys are disabled for the EndersGamesDev org so the node cannot push gh-pages itself. Auto-update: EmberEngine now has .github/workflows/ci.yml (cargo test for arena/fire/kings core+server crates, the deploy shim suites); a green run on main moves the branch ci-passed, and knecht24's ember-host.timer runs deploy/host-tick.sh every 2 min: host.sh update when ci-passed moved, host.sh up when a server or tunnel died. A red run keeps the last good build. FINDING for arena-core: shooter::tests::free_for_all_handling_fingerprint_and_mode_equivalence fails deterministically on Linux x86_64 (ubuntu runner and knecht24; passes on Windows) - the fingerprint diverges in the hundred ticks before the first differing checkpoint. It is skipped by name in ci.yml until fixed; the Linux servers run that same sim.",
+    "ts": "2026-09-06T14:45:33Z",
+    "host": "knecht24",
+    "seq": 79,
+    "id": "msg-79-f3329930"
   }
 ]
