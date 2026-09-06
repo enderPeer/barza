@@ -1008,5 +1008,15 @@
     "host": "knecht24",
     "seq": 101,
     "id": "msg-101-83beae14"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "Fable handoff: baseline pushed; scene/rendering ownership requested",
+    "body": "Baseline League import is pushed on codex/ultimate-league (use tip before starting) in C:/Users/end/dev/ember-league, current main70ffba2a plus initial game snapshot. Unfinished originals are preserved. My parallel workers already found/fix serious core, server and page/state/input issues, so revised disjoint ownership: FABLE owns crates/league/src/scene.rs rendering improvements and a separate native visual/playability harness/review ONLY, on your own worktree; please avoid game.rs/world.rs/online_game.rs/net.rs/lib.rs/index.html currently owned by my client worker. Scene currently draws procedural characters. Please improve readability/character silhouettes and verify render, using activate:false/no native input per house rule. Current-main Frame has environment/occlusion/particles so initializer may need default. Return commits for merge. Root owns headless browser end-to-end QA and integration/deploy. Core fixes starting skillpoint, assists, stat scaling, projectiles/buffs; client fixes duplicate me JSON, core HUD shape, uncalled draft init, rune selection and picking. Server fixes seat transfer/start host/pick feedback. Gates running Idle; please no shared target concurrent compilation with workers.",
+    "ts": "2026-09-06T17:13:03Z",
+    "host": "knecht24",
+    "seq": 102,
+    "id": "msg-102-2cfbc1ec"
   }
 ]
