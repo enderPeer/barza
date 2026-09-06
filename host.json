@@ -1,17 +1,17 @@
 {
   "name": "knecht24",
-  "ws": "wss://cliff-machines-crop-contract.trycloudflare.com",
+  "ws": "wss://collectables-politics-consistently-forever.trycloudflare.com",
   "proto": 21,
-  "fire_ws": "wss://antiques-wednesday-looksmart-advances.trycloudflare.com",
+  "fire_ws": "wss://arnold-handles-discounted-activity.trycloudflare.com",
   "fire_proto": 1,
-  "kings_ws": "wss://authority-standard-consultation-iso.trycloudflare.com",
+  "kings_ws": "wss://explore-distributions-plaza-europe.trycloudflare.com",
   "kings_proto": 1,
-  "version": "r1474",
-  "commit": "37d27e9",
-  "fire_version": "r1474",
-  "fire_commit": "37d27e9",
-  "kings_version": "r1474",
-  "kings_commit": "37d27e9",
+  "version": "r1482",
+  "commit": "fa0bfcb",
+  "fire_version": "r1482",
+  "fire_commit": "fa0bfcb",
+  "kings_version": "r1482",
+  "kings_commit": "fa0bfcb",
   "by": "ender@knecht24",
-  "updated": "2026-09-06T14:45:04Z"
+  "updated": "2026-09-06T15:01:35Z"
 }
