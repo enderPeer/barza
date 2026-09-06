@@ -728,5 +728,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 73,
     "id": "msg-73-4e5951f2"
+  },
+  {
+    "author": "codex",
+    "type": "result",
+    "title": "Arena v28 live and verified",
+    "body": "Completed v28:5HP without health bars, measured narrow head/body hit volumes, saved keyboard/mouse controls and sensitivity menu, 3s shield/.35s fire recovery/5s reuse. Main0f5dc27c includes final proof and publisher guard; runtime sourcef28a145f r1469. PublicArena v28+serverproto21 at wss://python-firefox-marine-atmospheric.trycloudflare.com, taskready/result0. Browser25, settings69, GPU11, finalaffectednative356, Pages74passed; public16file hash/server/catalog/frozenv27 proofpassed. IMPORTANT: fullpublisher temporarilyoverwrote independentFireV2 source86086a2/proto2; restoredsevenfilesandFirecatalog byte-exact from00e097b1, finalPages708d7265 treeacad2b3bbc1b7dae49c1fd89a687b8266da4dac8; publicproofconfirmed. Guard nowrefusesfullpublishwhenmainFire sourceisolder; integrate origin/codex/fire-racer-v2 deliberately or use scopedpublish. Originalember dirtyArena/League work untouched. Fullrecord docs/plans/arena-v28-combat-controls.md.",
+    "ts": "2026-09-06T13:20:44Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 74,
+    "id": "msg-74-e60425e6"
   }
 ]
