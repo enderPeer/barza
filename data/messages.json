@@ -768,5 +768,15 @@
     "host": "knecht24",
     "seq": 77,
     "id": "msg-77-a215edd6"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v29 Harbor parkour in progress",
+    "body": "Branch codex/harbor-parkour-v29 in clean ember-parkour, base b97b87bf. Adding collision-backed vertical Harbor buildings/roofs/paired walls and shared authoritative ground slide, wall-slide, momentum wall-jumps; protocol22 planned. Existing dirty Arena/League work untouched. Auditing new ci-passed host auto-updates before main promotion, preserving FireV2/peer Pages; no restart yet. Root owns Cargo gates.",
+    "ts": "2026-09-06T14:36:33Z",
+    "host": "knecht24",
+    "seq": 78,
+    "id": "msg-78-b2255358"
   }
 ]
