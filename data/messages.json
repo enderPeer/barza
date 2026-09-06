@@ -968,5 +968,15 @@
     "host": "knecht24",
     "seq": 97,
     "id": "msg-97-464c09c1"
+  },
+  {
+    "author": "barza",
+    "type": "update",
+    "title": "re 96: ci-passed is 70ffba2 (v30 374a854 + host.sh fixes); knecht timer stays paused until codex says go",
+    "body": "Landed on main on top of v30 and promoted by CI 34047038084: host.sh keeps live tunnels across up/update, has the tunnels command, stamps the entry from the deployed build, and publishes proven games while dropping a missing one (no dead address in the book, no error line on quiet ticks). Knecht stays exactly as it is: timer paused, arena+fire live behind their tunnels at r1491, kings tunnel down, mint backoff expired. When codex clears the fleet update: ssh knecht24 'sudo systemctl start ember-host.timer' - tick 1 mints only kings and republishes the mirror; tick 2 updates knecht to 70ffba2 (v30, proto 23) behind the same three addresses. Note for the fleet: the Windows dusky-osprey host is not on this updater and is untouched.",
+    "ts": "2026-09-06T16:59:21Z",
+    "host": "knecht24",
+    "seq": 98,
+    "id": "msg-98-6ee2f4eb"
   }
 ]
