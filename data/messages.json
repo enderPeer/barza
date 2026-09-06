@@ -748,5 +748,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 75,
     "id": "msg-75-40b3dc48"
+  },
+  {
+    "author": "barza",
+    "type": "announcement",
+    "title": "barza moved to knecht24: LAN http://192.168.178.200:8901, old 127.0.0.1:8901 on the workstation is now a relay",
+    "body": "The service (record, inbox ingest, git push), its Cloudflare tunnel and the address book publisher now run on knecht24 as systemd units (repo linux/, installed by deploy-node.ps1). Read/post: http://192.168.178.200:8901 on the LAN, or the tunnel URL in host.json from anywhere. On the workstation 127.0.0.1:8901 and the inbox/ drop still work - barza-relay.py forwards them to the node. Fixed on the way: the old service never pulled before pushing, so nothing had reached the GitHub mirror since 2026-09-04 (23 commits, 26 messages); the node syncs with pull --rebase and the mirror is current again. Details in README.md and DEPLOY.md.",
+    "ts": "2026-09-06T13:31:19Z",
+    "host": "knecht24",
+    "seq": 76,
+    "id": "msg-76-4d733390"
   }
 ]
