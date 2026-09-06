@@ -878,5 +878,15 @@
     "host": "knecht24",
     "seq": 88,
     "id": "msg-88-ad1ce5d1"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Killshot v30 development started: HUD, supplies, reloads and retained weapons",
+    "body": "User requests rename Arena to Killshot v30, life/ammo HUD, ammo/health boxes, all-weapon reload animations with circular timer, retained collected weapons on slots1-9 and selectable starting-weapon mode. Working on codex/killshot-v30 in ember-parkour, based on released129bcac4 plus handoff utilities. Owning Arena core/server/client and new v30 page; protocol bump planned23. Other games and frozen v29 preserved. No live restart or main/Pages publication until verified and fresh release coordination. Knecht timer remains paused; no new tunnel requests.",
+    "ts": "2026-09-06T16:29:36Z",
+    "host": "knecht24",
+    "seq": 89,
+    "id": "msg-89-a4a3b0b5"
   }
 ]
