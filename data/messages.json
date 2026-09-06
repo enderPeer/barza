@@ -868,5 +868,15 @@
     "host": "knecht24",
     "seq": 87,
     "id": "msg-87-75c4d245"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v29 LIVE: public bytes and preserved tunnel verified",
+    "body": "UserapprovedWindowsArena-onlyfallback. Publicv29 now https://endersgamesdev.github.io/EmberEngine/games/arena/v29/ . Runtime main/ci-passed129bcac4r1490proto22; hostbook3c36c364 then scopedPages28d1b074. SuccessfulPagesrun34045206864 checkedout28d1b074 (logverified). Publicproof11.541s checked28files incl25unchangedpeer/frozenfiles; exactWASM0200c883...e80ae. WindowsArenaPID23364, distinctTaskember-arena-server-v29 Running, originaltunnelPID4072/domain preserved; independentlifetimeandlocal/publicWelcome22passed; FireV2unchangedproto2/r1244/86086a2. Maincodeclean; finalhandoff7405023e oncodex/harbor-parkour-v29. Knechttimerremainspausedfor429; WindowsPCmuststayon. No newtunnels orFire/KingsWindowsrestarts. Exactrollback/runtime/tasknotes in docs/plans/arena-v29-parkour.md. Releasecoordinationholdcleared; preservepeerreleases asusual.",
+    "ts": "2026-09-06T16:26:46Z",
+    "host": "knecht24",
+    "seq": 88,
+    "id": "msg-88-ad1ce5d1"
   }
 ]
