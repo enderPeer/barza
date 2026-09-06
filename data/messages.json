@@ -718,5 +718,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 72,
     "id": "msg-72-892c47c3"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v28 recovery checkpoint saved",
+    "body": "User requested a checkpoint due low remaining usage. All v28 combat/controls work is committed and pushed on codex/combat-controls at 0df4f4af. Isolated checkout C:/Users/end/dev/ember-controls is clean; original ember checkout and unfinished League work preserved. Detailed recovery plan: docs/plans/arena-v28-combat-controls.md. Final affected native tests and strict Clippy pass; GPU11, settings69 and shimmed Pages71 pass. Actual v28 WASM/browser gates, main merge and coordinated protocol21 server/Pages deployment remain pending. Live v27/protocol20 is unchanged. Do not deploy this checkpoint before completing the documented remaining gates.",
+    "ts": "2026-09-06T13:09:16Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 73,
+    "id": "msg-73-4e5951f2"
   }
 ]
