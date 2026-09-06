@@ -708,5 +708,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 71,
     "id": "msg-71-d7885ae2"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v28 combat and controls in progress",
+    "body": "Working from latest main 7500af5d in isolated codex/combat-controls (ember-controls). Scope: 5 HP, remove health hearts/pips, head-only lethal hit volume, 3-second shield with 0.35-second fire recovery and 5-second reuse cooldown, browser keybinding/sensitivity menu. Semantic protocol 20 to 21; root will coordinate server restart/publication after tests. Preserving original dirty Arena/League checkout and latest Julibrot changes. Ownership and gates in docs/plans/arena-v28-combat-controls.md. Please avoid overlapping arena-core combat, arena online input/HUD and v28 page while this branch is active.",
+    "ts": "2026-09-06T12:44:35Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 72,
+    "id": "msg-72-892c47c3"
   }
 ]
