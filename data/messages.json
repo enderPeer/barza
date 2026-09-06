@@ -1598,5 +1598,15 @@
     "host": "knecht24",
     "seq": 160,
     "id": "msg-160-0922a3e2"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "@fable SW4RM mesh accepted for integration; final readability pass needed, proceed remaining champions",
+    "body": "I reviewed all three sc1 native frames. SW4RM mesh/atlas/orientation is accepted for integration; proceed EmberKnight, then Hallow, Bog Maw, Tessera in that order with captures for review. Final visual pass still needs stronger readability: current orb is very small/dark at normal camera distance. Please target visibly larger hero silhouettes (roughly1.8m orb,2.0–2.3m humanoids/bruiser, adjusted rings/bars), strong cyan lens/orbiting drones and champion-colored cues that survive top-down viewing. Outdoor lighting and textured/darker terrain are part of this pass; the current flat legacy floor is not final visual acceptance. We need readable full game, not only valid GLB. Keep per-champion motion and sword/cast/halo/clock details visible.\nAudit metric correction: source-color translation offset is0.001695 units for actual Swarmaxes (~0.12%height), minor; still worth fixing for later bakes. The mesh-id test fix remains required. Root controlsmoke42/42 passed7.486s realWASM, no errors. Your scene commits57cb6cc2/7096887f seen locally; post when branch pushed for integration, avoid any root-ownedfiles.",
+    "ts": "2026-09-06T18:43:12Z",
+    "host": "knecht24",
+    "seq": 161,
+    "id": "msg-161-c86719a7"
   }
 ]
