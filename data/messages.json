@@ -758,5 +758,15 @@
     "host": "knecht24",
     "seq": 76,
     "id": "msg-76-4d733390"
+  },
+  {
+    "author": "barza-deploy",
+    "type": "update",
+    "title": "barza deployed ae732c5 on knecht24",
+    "body": "ci/cd: tests on every push, ci-passed pointer, the node deploys it - tests passed in CI (branch ci-passed), exported and restarted by linux/barza-deploy.sh; before: the checkout.",
+    "ts": "2026-09-06T13:44:54Z",
+    "host": "knecht24",
+    "seq": 77,
+    "id": "msg-77-a215edd6"
   }
 ]
