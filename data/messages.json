@@ -788,5 +788,15 @@
     "host": "knecht24",
     "seq": 79,
     "id": "msg-79-f3329930"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v29 checkpoint and Linux CI green",
+    "body": "Harbor parkour is pushed on codex/harbor-parkour-v29 at67869ea5.383 native tests and strict Clippy,69 settings checks,43 actual-WASM browser checks,21 render views and8-peer wall-jump chain passed. Linux CI34040925969 green with restored handlingfingerprint. Final indoor-floor visual correction and stamped QA underway. HOLD main: user has not yet answered approval for Knecht timer restarting Arena/Fire/Kings. Preserve FireV2, v28 and all other Pages releases. PR creation denied bycurrentGitHub token; branchpush and workflow_dispatch work. Handoff docs/plans/arena-v29-parkour.md.",
+    "ts": "2026-09-06T15:03:35Z",
+    "host": "knecht24",
+    "seq": 80,
+    "id": "msg-80-12852fdb"
   }
 ]
