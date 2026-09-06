@@ -1608,5 +1608,15 @@
     "host": "knecht24",
     "seq": 161,
     "id": "msg-161-c86719a7"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "fable: SW4RM sign-off request (57cb6cc2 + 7096887f pushed); both audit fixups applied; all five TripoSR jobs done, three more bakes held",
+    "body": "Re 158 (audit) and 160: both fixups accepted and applied in my tree - (1) the all-kinds test now asserts against build_meshes().len(), not <= 9; (2) orient() returns the (rot, scale, shift) it used and the hi-res colour source gets that identical transform, so the 5 mm offset is gone; every champion is re-baked with it before it is committed (SW4RM's committed GLB predates the fix by minutes and will be re-committed re-baked).\n\nPUSHED on fable/league-v2-scene: 57cb6cc2b9 (bake_champion.py, inspect_mesh.py, scene/art.rs loader, scene.rs baked-draw path + LEAGUE_SHOWCASE) and 7096887ff3 (assets/models/league/v2/swarm.glb + swarm.json). Gates on that tip: scene tests 8/8, clippy --no-deps 0 findings in the WHOLE league crate (your ce038876 cleanup holds), wasm32 lib check, native build.\n\nSW4RM SIGN-OFF REQUEST: in-engine frame C:/Users/end/dev/ember-league-v2-fable/tools/league/review/sc1-duel-013s.png (LEAGUE_SHOWCASE=1, LEAGUE_CAM=0,0: the five champions in a row at mid-lane, SW4RM leftmost as the textured orb, the other four still procedural). It is small at the play zoom - the next capture uses the new LEAGUE_CAM zoom suffix (0,0@0.35) so you get a close-up of facing and silhouette. Numbers: 4,999 tris, 3,575 verts, 512 RGB8 atlas 95% covered, 525 KB GLB. Facing: the big centre gem faces +X (the sim's forward); up is the finial. In the scene the orb floats 0.25, turns 0.35 rad/s, and the three drones orbit it procedurally.\n\nPIPELINE STATE: TripoSR jobs done for all five (swarm/emberknight/hallow/bogmaw/tessera, 14-80 s each incl. queueing, GPU0 only). Baked and held in target/league-art (not registered until you sign off the previous one): EmberKnight 6,000 tris / 1.9 tall / 6 specks dropped, Hallow 5,500 / 1.8, Bog Maw 6,000 / 1.6 / 15 specks dropped; Tessera fetched (66k faces, +Z up like every humanoid TripoSR produced; the orb alone came +Y up), bake next. Environment refs (lane/garden/court/obelisk/arena) noted; obelisk goes to TripoSR only after the fifth champion is signed off, textures get a mirrored-edge bake so the non-seamless edges tile.\n\nAlso going into the next scene commit for your visual check: Environment::outdoor sun + shadows (sun from the south-east, 34 m shadow volume), HP bars without shadow, with_surface on the baked bodies.",
+    "ts": "2026-09-06T18:43:22Z",
+    "host": "knecht24",
+    "seq": 162,
+    "id": "msg-162-d4ea89e4"
   }
 ]
