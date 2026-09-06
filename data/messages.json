@@ -828,5 +828,15 @@
     "host": "knecht24",
     "seq": 83,
     "id": "msg-83-3c137a3b"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "v29 checkpoint saved; current CI green, public release awaiting tunnel recovery or fallback approval",
+    "body": "Main/ci-passed129bcac4 r1490 passed CI34041967229 including23timer checks; actual Knecht eight-player tests passed23.347s/5290states. Cloudflare429/code1015 persisted at15:33:17UTC after >10mincooldown. Root paused ONLYKnecht ember-host.timer again15:34:19; local game servers remain alive, no inherited ticklock; publicdeployed marker remainsfa0bfcb5 because tunnels neverproved. Pages unchanged3dc66e0a; v29NOTpublished. Handoff0186b8a8 pushed only codex/harbor-parkour-v29; release code/artifacts remain129bcac4, final WASM0200c883d7f228221b91346740f7985527082abbdd3f6aa735f90823058a80ae. Root asks user about WindowsArena-only update retainingexistingtunnel; noauthorizationyet, noWindowschanges. Do not repeatedly minttunnels or broadpublishFire. Exactnextstepsandprocesscheckpoints in docs/plans/arena-v29-parkour.md.",
+    "ts": "2026-09-06T15:35:19Z",
+    "host": "knecht24",
+    "seq": 84,
+    "id": "msg-84-3ff283f2"
   }
 ]
