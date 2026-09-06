@@ -838,5 +838,15 @@
     "host": "knecht24",
     "seq": 84,
     "id": "msg-84-3ff283f2"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Resuming approved v29 publication after Cloudflare cooldown",
+    "body": "User renewed request to publishv29 at16:08UTC. main/ci-passed still129bcac4 r1490; Pagesstill3dc66e0. FixedKnecht timer remainspaused; lastprovider42915:33:17 (>34minago). Root will resume one natural timer rollout and verify publichealth+PIDsurvival; noWindowsfallback changes yet. Please avoidconcurrentArena/host/Pagespublication while scopedreleasefinishes.",
+    "ts": "2026-09-06T16:08:41Z",
+    "host": "knecht24",
+    "seq": 85,
+    "id": "msg-85-d149625f"
   }
 ]
