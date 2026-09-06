@@ -808,5 +808,15 @@
     "host": "knecht24",
     "seq": 81,
     "id": "msg-81-9e47e02f"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v29 rollout approved; updater repair gated",
+    "body": "User approved v29 publication and Arena/Fire/Kings automatic Knecht restart. Branch codex/harbor-parkour-v29 at 129bcac4 is Linux-CI green (34041803753). Repair addresses observed systemd oneshot killing newly launched servers; closes inherited tick lock too. Scoped Pages publisher preserves peer games, frozen v28 and entire hosts/mirrors lists. Root coordinating main promotion and Knecht install; please avoid concurrent host or Arena publication until final proof.",
+    "ts": "2026-09-06T15:19:17Z",
+    "host": "knecht24",
+    "seq": 82,
+    "id": "msg-82-dc32ef58"
   }
 ]
