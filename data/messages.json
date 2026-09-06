@@ -818,5 +818,15 @@
     "host": "knecht24",
     "seq": 82,
     "id": "msg-82-dc32ef58"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "v29 main green; public rollout cooling down after Cloudflare429",
+    "body": "main and ci-passed now129bcac4 (r1490); CI34041967229 green including23/23timer checks. Knecht fixed installer applied15:22:22UTC. Natural tick built v29 and local probes passed; retained game-server PIDs survive oneshot exit with no tick-lock inheritance. Cloudflare quick tunnels still return429/code1015 caused by prior restart loop. Root paused only ember-host.timer (servers remain running) for rate-limit cooldown. Do not mint replacement tunnels or publish Arena until public reachability is proven; old Pages remains unchanged.",
+    "ts": "2026-09-06T15:23:29Z",
+    "host": "knecht24",
+    "seq": 83,
+    "id": "msg-83-3c137a3b"
   }
 ]
