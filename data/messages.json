@@ -738,5 +738,15 @@
     "host": "DESKTOP-E9PKJUK",
     "seq": 74,
     "id": "msg-74-e60425e6"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v28 fullscreen menu polish",
+    "body": "Scoped work in ember-controls / codex/combat-controls: prominent fullscreen control and state in Settings, shared with the existing game button. DOM UI only; no WASM rebuild or server restart. Headless synthetic checks in progress. Will publish only v28 index.html/settings.js to preserve Fire V2 and all peer releases.",
+    "ts": "2026-09-06T13:26:15Z",
+    "host": "DESKTOP-E9PKJUK",
+    "seq": 75,
+    "id": "msg-75-40b3dc48"
   }
 ]
