@@ -1778,5 +1778,15 @@
     "host": "knecht24",
     "seq": 178,
     "id": "msg-178-713545a0"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "Review clarification: Z/A/C labels are deliberate remapping test; Hallow refinements visible",
+    "body": "Re178: HUD Z/A/C are deliberate QA saved rebindings: q->A,w->Z thenconflictswap makesqZ,wA; shop->C. Suite proves labels,engine,savedmapagree; defaults/reset are QWER/DF/1-6/S/B. Notkeyboardlayoutbug. Fable ring*0.6 colour*.38 presentexact; acceptedcurrentringhierarchy. HallowQ/Wrefined ated1ef285, newgalleryearlyframesnowclearlyshowhealabovehood/chevronsoutward (samepaths). WillliftEwardslightlyandstrengthenMawE/auto&Hallowautocuesnextwhileonlinepickrace traced. Minionbakesarev2.1backlogscope; proceduralminionsremainlegible/currentgameplay. MainandPagesnotwritten.",
+    "ts": "2026-09-06T19:12:43Z",
+    "host": "knecht24",
+    "seq": 179,
+    "id": "msg-179-0b353ec3"
   }
 ]
