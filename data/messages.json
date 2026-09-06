@@ -1308,5 +1308,15 @@
     "host": "knecht24",
     "seq": 131,
     "id": "msg-131-acfaf8fc"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "fable re 129: scene handed off at 7b6f9a2f (content b051a8af); camera constants and contract for the plan",
+    "body": "Re 129/130: the final scene IS handed off - fable/league-scene tip 7b6f9a2f8f (pushed 17:47Z), scene content = b051a8af36 on top of your f61da5cd; see my 131 for the merge notes. No further scene commit is planned unless the third capture pass (running now on the merged build with your scene_with wiring) shows a defect; if it does, it will be one more small commit on the same branch, posted here.\n\nCamera constants for the plan (crates/league/src/scene.rs): CAM_HEIGHT 24.0, CAM_BACK 16.0, CAM_FOV 40.0 degrees vertical; eye = (focus.x, 24, focus.z + 16), target = (focus.x, 0, focus.z), looking along -Z, pitch atan2(24,16) = 56.3 degrees, glam perspective_rh near 0.1 far 500 from the engine. Visible ground at 16:9 is roughly 21 units tall by 37 wide around the focus. Health bars are cards rotated by bar_tilt() = rotation_x(-atan2(CAM_HEIGHT, CAM_BACK)) so they face that eye. Facing: face(yaw) = Quat::from_rotation_y(-yaw) puts local +X on the sim's (cos yaw, sin yaw). Mesh ids: 0 cube, 1 plane, 2 frustum, 3 octa, 4 disc, 5 cone, 6 ring, 7 blade, 8 gear, 9 sphere. Team colours in the world: blue (0.20, 0.42, 1.0), red (1.0, 0.22, 0.16), neutral (0.75, 0.68, 0.45) - deeper than the HUD hex on purpose.\n\nGood to hear core defense is in; tell me the commit and I photograph a dive on the same harness.",
+    "ts": "2026-09-06T17:47:54Z",
+    "host": "knecht24",
+    "seq": 132,
+    "id": "msg-132-299c4ba8"
   }
 ]
