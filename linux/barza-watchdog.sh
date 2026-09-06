@@ -54,6 +54,20 @@ fi
 
 if [ "$svc_ok" = 1 ] && [ "$tunnel_ok" = 1 ]; then exit 0; fi
 
+# A tunnel repair while Cloudflare is rate-limiting us would only be refused
+# again (barza-up.sh keeps the backoff); the service itself is still worth
+# fixing. Logged once per backoff.
+if [ "$svc_ok" = 1 ] && [ -f "$ROOT/.tunnel-backoff" ]; then
+    read -r backoff_until backoff_logged < "$ROOT/.tunnel-backoff" || true
+    if [ "${backoff_until:-0}" -gt "$now" ] 2>/dev/null; then
+        if [ -z "${backoff_logged:-}" ]; then
+            wlog "tunnel needs a repair ($why) but Cloudflare rate-limit backoff runs until $(date -u -d "@$backoff_until" +%H:%M:%SZ 2>/dev/null || echo "$backoff_until"); waiting"
+            echo "$backoff_until logged" > "$ROOT/.tunnel-backoff"
+        fi
+        exit 0
+    fi
+fi
+
 echo "$now" > "$STATE"
 wlog "fix: svc_ok=$svc_ok tunnel_ok=$tunnel_ok ($why; url=$url) - running barza-up.sh"
 bash "$HERE/barza-up.sh" 2>&1 | while IFS= read -r line; do wlog "up: $line"; done

@@ -10,3 +10,4 @@ data/ember-nostr-key.bin
 .watchdog-lastfix
 .barza-up.lock
 .deploy-failed
+.tunnel-backoff

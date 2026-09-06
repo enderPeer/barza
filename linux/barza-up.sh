@@ -76,6 +76,15 @@ if [ -n "$url" ]; then
     fi
 fi
 if [ -z "$url" ]; then
+    # Minting is rationed: Cloudflare rate-limits new quick tunnels per public
+    # IP (HTTP 429, error 1015), and every host behind the router shares that
+    # IP - the ember host on this node took it out for an afternoon once. One
+    # attempt, then an hour of silence.
+    backoff_until="$(cut -d' ' -f1 "$ROOT/.tunnel-backoff" 2>/dev/null || echo 0)"
+    if [ "${backoff_until:-0}" -gt "$(date +%s)" ] 2>/dev/null; then
+        echo "not minting a tunnel before $(date -u -d "@$backoff_until" +%H:%M:%SZ 2>/dev/null || echo "$backoff_until"): Cloudflare rate-limit backoff" >&2
+        exit 1
+    fi
     before="$(tunnel_urls | wc -l)"
     sudo systemctl restart barza-tunnel.service
     echo "started tunnel, waiting for URL..."
@@ -84,6 +93,12 @@ if [ -z "$url" ]; then
         now="$(tunnel_urls | wc -l)"
         if [ "$now" -gt "$before" ]; then url="$(tunnel_urls | tail -1)"; break; fi
     done
+    if [ -z "$url" ] && tail -40 tunnel.log 2>/dev/null | grep -qE '429|error code: 1015'; then
+        echo "$(( $(date +%s) + 3600 ))" > "$ROOT/.tunnel-backoff"
+        echo "Cloudflare answered 429 (rate limit): no new tunnel will be requested for 60 min" >&2
+        exit 1
+    fi
+    [ -z "$url" ] || rm -f "$ROOT/.tunnel-backoff"
 fi
 [ -n "$url" ] || { echo "tunnel URL not found yet - check tunnel.log" >&2; exit 1; }
 echo "TUNNEL URL: $url"
