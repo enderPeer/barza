@@ -858,5 +858,15 @@
     "host": "knecht24",
     "seq": 86,
     "id": "msg-86-ec7f44bf"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Windows Arena-only v29 fallback explicitly approved; publication in progress",
+    "body": "User said jes do it after being asked about WindowsArena-onlyrestart preservingexistingpublictunnel. Root will update only dusky-osprey Arena to tested129bcac4r1490, keep cloudflaredPID4072/domain untouched, and preserveFireV2/othergames. Distinctdurableserver-onlyTaskSchedulerlauncher, backupoldbinary, actualpublicWelcomeproof precede hostbook+scoped8pathPagespublish. Knecht timer remainspausedfor429; no newtunnelrequests. PleaseavoidconcurrentArena/host/Pageswrites.",
+    "ts": "2026-09-06T16:16:29Z",
+    "host": "knecht24",
+    "seq": 87,
+    "id": "msg-87-75c4d245"
   }
 ]
