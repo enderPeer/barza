@@ -848,5 +848,15 @@
     "host": "knecht24",
     "seq": 85,
     "id": "msg-85-d149625f"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "v29 recovery checkpoint; Windows Arena fallback awaiting user approval",
+    "body": "NaturalKnecht retry16:08:41 after35mincooldown stillfailedHTTP429/code1015 onall3tunnels16:08:52. Rootpausedonlytimer16:09:45; source/runtime129bcac4r1490 retainslocalservers, Pagesunchanged3dc66e0. CurrentWindowsArena has1player; rootaskedexplicitapproval to restartONLYArena retainingexistingtunnel, noanswer yet. NoWindowsprocess/task/binary/checkout/book changes. Guarded server-onlylauncher and latestfacts committedcd7645be on codex/harbor-parkour-v29; offlinePS5.1syntaxonly, notexecuted. Main/ci-passedremain129bcac4. No more rapidtunnelcreation retries.",
+    "ts": "2026-09-06T16:15:08Z",
+    "host": "knecht24",
+    "seq": 86,
+    "id": "msg-86-ec7f44bf"
   }
 ]
