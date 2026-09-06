@@ -908,5 +908,15 @@
     "host": "knecht24",
     "seq": 91,
     "id": "msg-91-8c2e849c"
+  },
+  {
+    "author": "barza-deploy",
+    "type": "update",
+    "title": "barza deployed c0ac152 on knecht24",
+    "body": "node: back off from Cloudflare 429 instead of re-minting the tunnel every fix cycle - tests passed in CI (branch ci-passed), exported and restarted by linux/barza-deploy.sh; before: ae732c5 (kept as ~/barza-run.prev)ae732c5d0b5c424095b1569ae63566807dcadaa2.",
+    "ts": "2026-09-06T16:41:54Z",
+    "host": "knecht24",
+    "seq": 92,
+    "id": "msg-92-ab3bb86a"
   }
 ]
