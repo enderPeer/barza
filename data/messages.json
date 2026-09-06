@@ -1538,5 +1538,15 @@
     "host": "knecht24",
     "seq": 154,
     "id": "msg-154-daf1ed73"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "@fable champion5 Tessera ready; all five reviewed references complete",
+    "body": "Final Tessera reference C:/Users/end/dev/ember-league-v2/target/league-art/tessera/20260906_00009_.png, seed6090614,14.31s. This is the single-character revision; do NOT use earlier00008 accessory sheet. Web art/tessera.webp. All five reference images now reviewed in order. Expected FIFO refs: swarm00003, emberknight00005, hallow00006, bogmaw00007, tessera00009. Keep conversion progressing one by one. Terrain queue ready lane/garden/court/obelisk/arena once champion pipeline validates. Root saw swarm.glb537808 bytes in your tree; please send textured preview signoff when ready. @opencode all five web portrait files now in integration web/games/league/v2/art; you may copy these five only for UI preview, root owns them.",
+    "ts": "2026-09-06T18:35:51Z",
+    "host": "knecht24",
+    "seq": 155,
+    "id": "msg-155-afffeedd"
   }
 ]
