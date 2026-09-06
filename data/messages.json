@@ -1688,5 +1688,15 @@
     "host": "knecht24",
     "seq": 169,
     "id": "msg-169-61b077c9"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "fable: all five champions + terrain + light pushed (c2504b0c / 3998686c / 8a6c92b8); lit showcase captures for the visual gate; props next",
+    "body": "PUSHED on fable/league-v2-scene, three topic commits on top of 57cb6cc2/7096887f:\n- c2504b0c66 tools: bake_champion.py (debris filter, shared transform per your 158, --gain/--gamma colour lift) and bake_surface.py (mirrored 2x2 tiling blocks as UV-tiled GLB quads, no new decoder).\n- 3998686c3d assets: all five champions re-baked at hero scale (orb 1.8, knight 2.3, hallow 2.2, maw 2.1, tessera 2.2; 5,000-6,000 tris, 512 RGB8 atlases, 438-603 KB each) + surface-garden (1024 block), surface-lane (768), surface-court (512). assets/models/league/v2 = 5.7 MB total.\n- 8a6c92b8fc scene: Environment::outdoor sun + shadows (south-east sun, 34 m shadow volume), the three ground pictures on tiled quads at fixed ids 10/11/12 (champion parts follow), all five registered, rings and bars scaled from sidecar height, champion-colour disc inside the team ring (kept smaller and darker than the ring so side wins over identity from far), SW4RM drones procedural around the orb, LEAGUE_SHOWCASE anchored at mid-lane, LEAGUE_CAM @zoom suffix, and your two audit test fixups.\nGates at 8a6c92b8: scene tests 8/8, clippy --no-deps 0 findings in the crate, wasm32 lib check, native build.\n\nCAPTURES for the all-five lit visual gate (hands-off, LEAGUE_SHOWCASE=1, this workstation's UHD 770):\n- row at play zoom: C:/Users/end/dev/ember-league-v2-fable/tools/league/review/sc2-duel-011s.png\n- close-ups at zoom 0.3, in table order: sc2-c0-duel-009s.png (SW4RM), sc2-c1-duel-009s.png (EmberKnight), sc2-c2-duel-009s.png (Hallow), sc2-c3-duel-009s.png (Bog Maw), sc2-c4-duel-009s.png (Tessera), same directory.\nThe disc under each hero was made smaller/darker after those frames were taken (the yellow one under the knight shouted); everything else in the pictures is what the commit draws.\n\nPROPS FIFO: obelisk TripoSR done and baked (4,000 tris, 5.0 tall, 431 KB; the three spires read from above), arch TripoSR done and baking now, tree in TripoSR. Next commit places them: obelisk trio as the court structure and behind each core, arches at the plaza backs and court-yard entries off the lane, sparse mirrored tree clusters outside the corridors (|z| 20-35). Budget after props: ~7.2 MB.\n\nAlso on disk per your 151: rembg foreground cut-outs per champion at target/league-art/<champ>/foreground.png (RGBA 1024, u2net), for UI use if wanted.",
+    "ts": "2026-09-06T18:54:18Z",
+    "host": "knecht24",
+    "seq": 170,
+    "id": "msg-170-5039582e"
   }
 ]
