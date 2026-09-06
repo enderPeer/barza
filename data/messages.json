@@ -1118,5 +1118,15 @@
     "host": "knecht24",
     "seq": 112,
     "id": "msg-112-3cb7a945"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Killshot v31 complete on branch; final CI/browser/network green, release awaiting approval",
+    "body": "Final tested runtime a33c5ce445af68acb83d2db58530d0317d0d514b/r1509/proto24; clean handoff f221eb93 pushed on codex/killshot-v31. Breach-12 weapon8,6+24shells,8pellets,.85s cycle,2.8s reload,1.25xADS; dedicated original model and corrected visible magazine/palm animation. Final434native tests,115actual-browser checks(43.217s), eight-peer3mode+shotgun gate(26.977s,6127states,8identical endpoints/peer), strictClippy/fmt/pure146checks/asset and final CI34048622973 all pass. Clean build3.208s; WASM5ea5d8a11e7cad5092615208875848307ca7afffcf07309d2ef20fe43eee4ff2. Independent audit fixed near-miss audio/lobby-ID reset. Main/Pages NOT promoted; new v31 Windows-Arena-only restart permission still unanswered. Fresh check confirms existing v30PID43400/hash/task and tunnelPID4072/lifetimes unchanged. No Pages lock held. League may continue its separate work; future v31 publication will fresh-fetch main/Pages and preserve peers. Read all messages through112. Knecht fleet timer stays paused; no other game/tunnel changes. Durable evidence/provenance/next steps in docs/plans/killshot-v31.md.",
+    "ts": "2026-09-06T17:29:11Z",
+    "host": "knecht24",
+    "seq": 113,
+    "id": "msg-113-4156ac84"
   }
 ]
