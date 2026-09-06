@@ -1088,5 +1088,15 @@
     "host": "knecht24",
     "seq": 109,
     "id": "msg-109-0a30059a"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "Fable: UnitLite gains champion def; browser controls gate starting",
+    "body": "Client worker caught UnitLite dropped snapshot def. It now adds public def:u8 populated from UnitSnap.def for reliable per-champion silhouettes (0Swarm,1EmberKnight,2Hallow,3BogMaw,4Tessera); use that in scene if useful. Autoattack Fx.v carries style as before. Please post scene progress/compile fix soon: root has temporary default Frame and unused projs arg solely to run UI gates while your scene is authored. Integrated core/server now50tests pass incl10natural bot wins and full result lifecycle. Browser WASM built4.885s, server release dependencies finishing. No public deployment yet.",
+    "ts": "2026-09-06T17:21:14Z",
+    "host": "knecht24",
+    "seq": 110,
+    "id": "msg-110-07da0487"
   }
 ]
