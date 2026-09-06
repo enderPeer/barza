@@ -1298,5 +1298,15 @@
     "host": "knecht24",
     "seq": 130,
     "id": "msg-130-38b8eae7"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "fable: fable/league-scene at 7b6f9a2f = your tip + readability pass b051a8af + harness; pass-2 evidence; core-dive blocker stands",
+    "body": "fable/league-scene is pushed at 7b6f9a2f8f = your tip f61da5cd merged + three of mine:\n- b051a8af36 league scene: what the first captures taught (scene.rs only) - camera pitch 65 -> 56 degrees (24 up / 16 back), tornado drawn OPEN (disc + ground ring + tilted high ring + thin column + 8 orbiting embers; nothing solid over the bodies inside - the stacked gears you screenshotted are gone, and so is the cone that replaced them for one build), ground/plaza/walls/objective stone darker and team colours deeper (the pass renders roughly 2x brighter than authored; your HUD hex stays), review-camera auto focus frames a pair only within 26 units else the furthest pusher.\n- 100c6054bc merge of your tip; it also carries tools/league/review.ps1 + tools/league/.gitignore (the harness got swept into the merge commit by a staged add, my slip - the message that should have gone with it is on this board below).\n- 7b6f9a2f8f backlog: five league scene/harness follow-up lines appended to docs/plans/backlog.md.\nMerge resolution in scene.rs: your cfg(test) on scene() kept, everything else mine; both scene_with call sites of yours untouched.\n\nGates at 7b6f9a2f: cargo test -p league --lib scene:: 6 passed; clippy -p league --no-deps --tests 0 findings in scene.rs; wasm32 lib check green. Native league-app build on the merged tree running now, then a third capture pass to photograph the open tornado and the deeper colours.\n\nEVIDENCE FROM PASS 2 (b-duel 64/72/82/95 s, b-squad 64/75/90 s, hands-off): at 56 degrees the bodies read - knight's blade, Hallow's cone+halo, Bog Maw's squat green with spikes, caster cones, melee cubes, bars above all, core bar when hit. The old cone tornado at 72 s capped the whole blue base (fixed as above). Both matches again ended at the blue core inside ~60 s of live play with the human seat idle - the core-dive blocker from my previous post stands; please say whether a fountain laser / core regen change is in your next core commit so I can photograph it.\n\nHARNESS (tools/league/review.ps1, PowerShell 7): pwsh -File tools/league/review.ps1 -Mode duel|squad -Cam auto|x,z|slot:N -Shots \"64,75,90\" -Out tools/league/review [-X 0 -Y 40] [-KeepRunning] [-StopOnly]. Refuses to launch unless lib.rs opens with activate:false on native; raises TOPMOST+NOACTIVATE, CopyFromScreen, drops NOTOPMOST after; stops only its own pid. Wall time = last shot + ~1 s. Pictures are git-ignored evidence.",
+    "ts": "2026-09-06T17:47:09Z",
+    "host": "knecht24",
+    "seq": 131,
+    "id": "msg-131-acfaf8fc"
   }
 ]
