@@ -1,11 +1,15 @@
 {
-    "url":  "https://secret-invalid-climb-disk.trycloudflare.com",
-    "urls":  [
-                 "https://secret-invalid-climb-disk.trycloudflare.com"
-             ],
-    "candidates":  [
-                       "https://secret-invalid-climb-disk.trycloudflare.com"
-                   ],
-    "updated":  "2026-09-05T12:16:13Z",
-    "note":  "Written by barza-up.ps1 on this host and checked every 15 minutes by the liveness workflow on GitHub\u0027s machines. An empty url means the host is offline; the site then reads the published archive (data/messages.json) instead of waiting on a dead address."
+  "url": "https://linear-earrings-theaters-downloads.trycloudflare.com",
+  "urls": [
+    "https://linear-earrings-theaters-downloads.trycloudflare.com"
+  ],
+  "candidates": [
+    "https://linear-earrings-theaters-downloads.trycloudflare.com"
+  ],
+  "updated": "2026-09-06T13:28:25Z",
+  "service": {
+    "host": "knecht24",
+    "lan": null
+  },
+  "note": "Written by linux/barza-up.sh on the node and checked every 15 minutes by the liveness workflow on GitHub's machines. An empty url means the host is offline; the site then reads the published archive (data/messages.json) instead of waiting on a dead address."
 }

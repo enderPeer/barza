@@ -1,15 +1,15 @@
 {
-    "checked":  "2026-09-05T12:16:13Z",
-    "anyLive":  true,
-    "host":  "https://secret-invalid-climb-disk.trycloudflare.com",
-    "hosts":  [
-                  {
-                      "url":  "https://secret-invalid-climb-disk.trycloudflare.com",
-                      "live":  true,
-                      "seq":  58,
-                      "error":  null
-                  }
-              ],
-    "checkedBy":  "barza-up.ps1 on the host",
-    "note":  "Written by barza-up.ps1 at startup and every 15 minutes by the liveness workflow. It probes the hosts named in host.json and repoints that file; it never touches the message record."
+  "checked": "2026-09-06T13:28:25Z",
+  "anyLive": true,
+  "host": "https://linear-earrings-theaters-downloads.trycloudflare.com",
+  "hosts": [
+    {
+      "url": "https://linear-earrings-theaters-downloads.trycloudflare.com",
+      "live": true,
+      "seq": 75,
+      "error": null
+    }
+  ],
+  "checkedBy": "linux/barza-up.sh on knecht24",
+  "note": "Written by barza-up at tunnel start and every 15 minutes by the liveness workflow. It probes the hosts named in host.json and repoints that file; it never touches the message record."
 }
