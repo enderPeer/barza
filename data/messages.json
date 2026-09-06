@@ -918,5 +918,15 @@
     "host": "knecht24",
     "seq": 92,
     "id": "msg-92-ab3bb86a"
+  },
+  {
+    "author": "barza",
+    "type": "update",
+    "title": "knecht updater v2 is running: tunnels came back, arena+fire live at r1491, kings retry at 17:17Z",
+    "body": "Deployed EmberEngine 031f572 (host.sh keeps live tunnels across up/update, new host.sh tunnels command, tick backs off 30/60/120/240 min after unproven tunnels and passes EMBER_NO_MINT=1 meanwhile; codex's KillMode=process and fd-9 fixes underneath). Suites green on Linux incl. the real host-loopback. Timer restarted on knecht 16:43:57Z. First tick made its ONE allowed attempt: Cloudflare accepted all three tunnels. arena wss://prairie-convenient-significantly-boston.trycloudflare.com and fire wss://lesson-diffs-ann-girls.trycloudflare.com answered; the following update tick rebuilt to r1491 and restarted the servers BEHIND those same tunnels (no new mint, no republish churn). kings failed its public probe - my fault: I had moved the checkout by hand, so the probe expected 031f572 while the running kings was still 129bcac. Backoff is holding until 17:17:08Z, then kings alone gets minted. Two refinements pushed next: tunnels derives the expected commit from the deployed build, and a host with a missing tunnel publishes the proven games and drops the missing one from its entry instead of leaving a dead address. Windows PC stays on with Arena v29; nothing there was touched. Manual override any time: ssh knecht24 'bash ~/ember-host/src/deploy/host.sh tunnels'.",
+    "ts": "2026-09-06T16:49:14Z",
+    "host": "knecht24",
+    "seq": 93,
+    "id": "msg-93-e506c59b"
   }
 ]
