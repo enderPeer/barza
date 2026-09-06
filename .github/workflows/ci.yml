@@ -1,0 +1,110 @@
+# ci: tests on every push to main and every pull request; a green run on
+# main moves the branch pointer `ci-passed` to that commit.
+#
+# That pointer is the whole hand-off to deployment. The node (knecht24) is
+# LAN-only and cannot be reached from here, and a self-hosted runner on a
+# public repository would let any fork's pull request run code on it - so
+# the node pulls instead: linux/barza-deploy.sh fetches `ci-passed` every
+# 60 s through its deploy key and runs exactly that commit, never main
+# itself. No secrets on the node, no inbound connection, nothing to leak.
+#
+# The record and the address book are committed to main by the node and by
+# the liveness workflow every few minutes; those commits touch no code and
+# are ignored here, so they neither run the suite nor move the pointer.
+name: ci
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'data/**'
+      - 'host.json'
+      - 'status.json'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: test (${{ matrix.os }}, python ${{ matrix.python }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.14']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: compile
+        run: python -m py_compile barza_server.py barza-relay.py
+      - name: end-to-end (service, git sync, relay, code/data split)
+        run: python tests/test_barza.py
+
+  lint:
+    name: shell, systemd units, PowerShell
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shell scripts
+        run: |
+          bash -n linux/*.sh
+          shellcheck -S warning linux/*.sh
+      - name: systemd units, rendered as on a node
+        run: |
+          # cloudflared from Cloudflare's repository, the same lines install.sh
+          # uses: systemd-analyze verify checks that every ExecStart exists.
+          sudo mkdir -p --mode=0755 /usr/share/keyrings
+          curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg >/dev/null
+          echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared any main' | sudo tee /etc/apt/sources.list.d/cloudflared.list >/dev/null
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq cloudflared
+          mkdir -p /tmp/units
+          for u in linux/*.service linux/*.timer; do
+            sed -e "s#@USER@#$(id -un)#g" -e "s#@ROOT@#$PWD#g" -e "s#@CODE@#$PWD#g" \
+                -e "s#@LAN_IP@#127.0.0.2#g" -e "s#@PORT@#8901#g" "$u" > "/tmp/units/$(basename "$u")"
+          done
+          if grep -l '@[A-Z_]*@' /tmp/units/*; then echo "unrendered placeholder"; exit 1; fi
+          systemd-analyze verify /tmp/units/*.service /tmp/units/*.timer
+      - name: PowerShell scripts parse
+        shell: pwsh
+        run: |
+          $bad = 0
+          foreach ($f in Get-ChildItem *.ps1) {
+            $errs = $null
+            [System.Management.Automation.PSParser]::Tokenize((Get-Content -Raw $f), [ref]$errs) | Out-Null
+            if ($errs.Count) { $errs | ForEach-Object { Write-Host "$($f.Name):$($_.Token.StartLine) $($_.Message)" }; $bad++ }
+            else { Write-Host "parse ok: $($f.Name)" }
+          }
+          if ($bad) { exit 1 }
+
+  promote:
+    name: promote to ci-passed
+    needs: [test, lint]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: move ci-passed to this commit
+        run: |
+          git fetch -q origin +refs/heads/ci-passed:refs/remotes/origin/ci-passed 2>/dev/null || true
+          if git rev-parse -q --verify refs/remotes/origin/ci-passed >/dev/null \
+             && ! git merge-base --is-ancestor refs/remotes/origin/ci-passed HEAD; then
+            echo "ci-passed is not behind this commit; leaving it where it is"
+            exit 0
+          fi
+          git push origin HEAD:refs/heads/ci-passed
+          echo "ci-passed -> $(git rev-parse --short HEAD): $(git log -1 --format=%s)"

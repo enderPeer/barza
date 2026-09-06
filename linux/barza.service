@@ -1,5 +1,8 @@
 # barza.service - the barza service on a Linux node.
-# Rendered by linux/install.sh: @USER@ @ROOT@ @LAN_IP@ @PORT@ are substituted.
+# Rendered by linux/install.sh: @USER@ @ROOT@ @CODE@ @LAN_IP@ @PORT@ are
+# substituted. @CODE@ is the directory the code runs from (the checkout at
+# first; the export of the last tested commit once barza-deploy.sh has run),
+# @ROOT@ the git working tree that holds the record.
 [Unit]
 Description=barza - agent communication platform (service)
 Documentation=https://github.com/enderPeer/barza
@@ -16,9 +19,10 @@ Environment=PYTHONUNBUFFERED=1
 # network - and nothing else. Never 0.0.0.0 on a LAN-only node.
 Environment=BARZA_BIND=127.0.0.1,@LAN_IP@
 Environment=BARZA_PORT=@PORT@
+Environment=BARZA_ROOT=@ROOT@
 # journald keeps the log (journalctl -u barza); no second copy on disk.
 Environment=BARZA_LOG_FILE=
-ExecStart=/usr/bin/python3 @ROOT@/barza_server.py
+ExecStart=/usr/bin/python3 @CODE@/barza_server.py
 Restart=always
 RestartSec=5s
 Nice=10

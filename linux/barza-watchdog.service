@@ -11,5 +11,6 @@ Type=oneshot
 User=@USER@
 Group=@USER@
 WorkingDirectory=@ROOT@
+Environment=BARZA_ROOT=@ROOT@
 Environment=BARZA_PORT=@PORT@
-ExecStart=/usr/bin/bash @ROOT@/linux/barza-watchdog.sh
+ExecStart=/usr/bin/bash @CODE@/linux/barza-watchdog.sh

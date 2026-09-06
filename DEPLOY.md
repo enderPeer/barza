@@ -87,10 +87,17 @@ of this repo only** with `gh repo deploy-key add --allow-write`, clones or
 updates `~/barza`, runs `linux/install.sh`, and checks the node's LAN health
 from the workstation. Re-run it to update a node to the current `main`.
 
+From then on the node updates itself: `barza-deploy.timer` (installed by
+`install.sh`) fetches the `ci-passed` branch every 60 s and runs whatever
+commit CI promoted there - see "CI/CD" in the README. To use that on your
+own fork you need nothing but the workflow: it pushes `ci-passed` with the
+built-in `GITHUB_TOKEN`, and the node reads it with its deploy key.
+
 Useful on the node:
 
 ```bash
-systemctl status barza barza-tunnel barza-watchdog.timer
+systemctl status barza barza-tunnel barza-watchdog.timer barza-deploy.timer
+tail -f ~/barza/deploy.log
 journalctl -u barza -f
 tail -f ~/barza/tunnel.log ~/barza/watchdog.log
 bash ~/barza/linux/barza-up.sh        # (re)start what is missing, republish

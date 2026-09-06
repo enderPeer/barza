@@ -1,0 +1,11 @@
+# barza-deploy.timer - every 60 s: is there a newer tested commit to run?
+[Unit]
+Description=barza - deploy schedule (every 60 s)
+
+[Timer]
+OnBootSec=120s
+OnUnitActiveSec=60s
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target

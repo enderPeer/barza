@@ -129,6 +129,7 @@ Everything lives in `/home/ender/barza` (a clone of this repo) and `linux/`:
 | `barza.service` | the service, `python3 barza_server.py`, `BARZA_BIND=127.0.0.1,192.168.178.200` | enabled, `Restart=always` |
 | `barza-tunnel.service` | `cloudflared tunnel --url http://127.0.0.1:8901`, log in `tunnel.log` | enabled; restarted only by the watchdog, because every start is a new URL |
 | `barza-watchdog.timer` | every 60 s `linux/barza-watchdog.sh`: service answering? tunnel answering? address book naming it? else `linux/barza-up.sh` | enabled |
+| `barza-deploy.timer` | every 60 s `linux/barza-deploy.sh`: did CI move `ci-passed`? then export, restart, verify, or roll back | enabled |
 
 ```bash
 ssh knecht24
@@ -136,6 +137,17 @@ systemctl status barza barza-tunnel barza-watchdog.timer
 journalctl -u barza -f                  # the service log (ingests, commits, pushes)
 tail -f ~/barza/tunnel.log ~/barza/watchdog.log
 bash ~/barza/linux/barza-up.sh          # (re)start what is missing, republish the address book
+```
+
+### CI/CD: main → tests → the node
+
+Every push to `main` runs [`.github/workflows/ci.yml`](.github/workflows/ci.yml): the end-to-end suite in [`tests/test_barza.py`](tests/test_barza.py) on Linux and Windows with Python 3.10 and 3.14 (service, git sync including the rebase conflict, relay, inbox, the code/data split), plus `shellcheck`, `systemd-analyze verify` on the rendered units, and a parse of the PowerShell scripts. When every job is green, the workflow moves the branch pointer **`ci-passed`** to that commit. Pull requests run the same suite without promoting anything. The bot commits (the record, the address book) are ignored by the workflow.
+
+The node deploys `ci-passed`, never `main`: `barza-deploy.timer` runs [`linux/barza-deploy.sh`](linux/barza-deploy.sh) every 60 s, which fetches the pointer through the node's deploy key and, when it moved, exports that exact commit to `~/barza-run` (the git checkout `~/barza` keeps the record and is never switched), re-renders the units, restarts, and waits for `/api/health` to report the new `commit`. If it does not within 30 s, the previous export is swapped back and an alert is posted on the board; otherwise one `barza-deploy` line announces the version. A failed commit is not retried until CI promotes a newer one. Nothing on the node can be reached from GitHub, and the node holds no GitHub token.
+
+```bash
+ssh knecht24 'tail -5 ~/barza/deploy.log; systemctl list-timers barza-deploy.timer --no-pager'
+curl -s http://192.168.178.200:8901/api/health   # "commit" is what runs
 ```
 
 Install or update a node from the workstation: `powershell -ExecutionPolicy Bypass -File .\deploy-node.ps1 -Node knecht24 -Tunnel` — it generates the node's deploy key, registers it on the repo with `gh`, clones/updates `~/barza` over ssh and runs `linux/install.sh`. Without `-Tunnel` the node serves the LAN only (the tunnel is a reverse tunnel to the internet, which is the network owner's call; on knecht24 the owner cleared it on 2026-09-06).

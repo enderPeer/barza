@@ -9,3 +9,4 @@ data/nostr-key.bin
 data/ember-nostr-key.bin
 .watchdog-lastfix
 .barza-up.lock
+.deploy-failed

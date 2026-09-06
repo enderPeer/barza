@@ -1,0 +1,16 @@
+# barza-deploy.service - one deploy check; fired every 60 s by barza-deploy.timer.
+# Deploys the commit CI promoted to `ci-passed` (linux/barza-deploy.sh).
+# Rendered by linux/install.sh.
+[Unit]
+Description=barza - deploy the newest main commit whose tests passed
+Documentation=https://github.com/enderPeer/barza
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=@USER@
+Group=@USER@
+WorkingDirectory=@ROOT@
+Environment=BARZA_ROOT=@ROOT@
+Environment=BARZA_PORT=@PORT@
+ExecStart=/usr/bin/bash @CODE@/linux/barza-deploy.sh

@@ -12,9 +12,15 @@ Configuration (environment, all optional):
                   (a LAN node serves loopback and its LAN address:
                   "127.0.0.1,192.168.178.200")
   BARZA_PORT      default 8901
+  BARZA_ROOT      the git working tree: data/, inbox/, host.json, status.json;
+                  default: the directory of this file. A node's deployer runs
+                  the tested code from an exported directory and points this
+                  at the checkout that holds the record (linux/barza-deploy.sh)
   BARZA_LOG_FILE  path of the text log; empty disables it (journald has
-                  stdout anyway); default barza_server.log beside this file
+                  stdout anyway); default barza_server.log in BARZA_ROOT
   BARZA_GIT_REMOTE / BARZA_GIT_BRANCH   default origin / main
+  BARZA_PUSH_INTERVAL_S / BARZA_PULL_INTERVAL_S / BARZA_SYNC_MIN_GAP_S
+                  sync cadence, default 60 / 300 / 30 (the tests lower them)
 """
 import json
 import os
@@ -28,7 +34,8 @@ from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent
+CODE_DIR = Path(__file__).resolve().parent          # the code: this file, index.html, llms.txt
+ROOT = Path(os.environ.get("BARZA_ROOT") or CODE_DIR).resolve()   # the git working tree
 DATA_DIR = ROOT / "data"
 INBOX_DIR = ROOT / "inbox"
 PROCESSED_DIR = INBOX_DIR / "processed"
@@ -39,14 +46,35 @@ BIND_ADDRS = [a.strip() for a in os.environ.get("BARZA_BIND", "127.0.0.1").split
 PORT = int(os.environ.get("BARZA_PORT", "8901"))
 GIT_REMOTE = os.environ.get("BARZA_GIT_REMOTE", "origin")
 GIT_BRANCH = os.environ.get("BARZA_GIT_BRANCH", "main")
-PUSH_INTERVAL_S = 60      # at most one push a minute while messages arrive
-PULL_INTERVAL_S = 300     # and a pull every five minutes even when idle
-SYNC_MIN_GAP_S = 30       # never hammer the remote after a failure
+
+
+def _env_int(name: str, default: int) -> int:
+    try:
+        return int(os.environ.get(name, "") or default)
+    except ValueError:
+        return default
+
+
+PUSH_INTERVAL_S = _env_int("BARZA_PUSH_INTERVAL_S", 60)   # at most one push a minute while messages arrive
+PULL_INTERVAL_S = _env_int("BARZA_PULL_INTERVAL_S", 300)  # and a pull every five minutes even when idle
+SYNC_MIN_GAP_S = _env_int("BARZA_SYNC_MIN_GAP_S", 30)     # never hammer the remote after a failure
 INBOX_POLL_S = 3
 MAX_MESSAGE_BYTES = 64 * 1024
-VERSION = "1.2"
+VERSION = "1.3"
 
-STATIC_ROOT_FILES = ("host.json", "status.json", "llms.txt")
+
+def _deployed_commit() -> str | None:
+    """The commit this code was exported from, written by linux/barza-deploy.sh."""
+    try:
+        return (CODE_DIR / ".sha").read_text(encoding="utf-8").strip() or None
+    except OSError:
+        return None
+
+
+DEPLOYED = _deployed_commit()
+
+STATIC_ROOT_FILES = ("host.json", "status.json")   # written next to the record
+STATIC_CODE_FILES = ("llms.txt",)                  # shipped with the code
 # Everything the service commits. The message record is its own; the address
 # book is written next to it by barza-up (the .ps1 on Windows, the .sh on
 # Linux) and picked up here, so that ONE actor runs git in this working tree.
@@ -461,6 +489,7 @@ class Handler(BaseHTTPRequestHandler):
                 "ok": True,
                 "service": "barza",
                 "version": VERSION,
+                "commit": DEPLOYED,
                 "host": host_name(),
                 "uptime_s": int(time.time() - start_time),
                 "seq": seq,
@@ -486,9 +515,11 @@ class Handler(BaseHTTPRequestHandler):
         elif path == "/api/v1":
             self._send_json(200, api_doc())
         elif path in ("/", "/index.html"):
-            self._send_file(ROOT / "index.html")
+            self._send_file(CODE_DIR / "index.html")
         elif path.lstrip("/") in STATIC_ROOT_FILES:
             self._send_file(ROOT / path.lstrip("/"))
+        elif path.lstrip("/") in STATIC_CODE_FILES:
+            self._send_file(CODE_DIR / path.lstrip("/"))
         elif path.startswith("/data/"):
             rel = path[len("/data/"):]
             target = (DATA_DIR / rel).resolve()
@@ -559,7 +590,7 @@ def main():
         threading.Thread(target=srv.serve_forever, daemon=True).start()
     log(f"barza service v{VERSION} listening on "
         + ", ".join(f"http://{a}:{PORT}" for a in BIND_ADDRS)
-        + f" (host={host_name()})")
+        + f" (host={host_name()}, commit={DEPLOYED or 'unknown'}, code={CODE_DIR}, tree={ROOT})")
     servers[-1].serve_forever()
 
 

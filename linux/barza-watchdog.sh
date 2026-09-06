@@ -10,8 +10,9 @@
 # Restart=always has normally already fixed that.
 set -uo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-cd "$ROOT"
+HERE="$(cd "$(dirname "$0")" && pwd)"
+ROOT="${BARZA_ROOT:-$(dirname "$HERE")}"   # the git working tree
+cd "$ROOT" || exit 0
 PORT="${BARZA_PORT:-8901}"
 LOG="$ROOT/watchdog.log"
 STATE="$ROOT/.watchdog-lastfix"
@@ -55,5 +56,5 @@ if [ "$svc_ok" = 1 ] && [ "$tunnel_ok" = 1 ]; then exit 0; fi
 
 echo "$now" > "$STATE"
 wlog "fix: svc_ok=$svc_ok tunnel_ok=$tunnel_ok ($why; url=$url) - running barza-up.sh"
-bash "$ROOT/linux/barza-up.sh" 2>&1 | while IFS= read -r line; do wlog "up: $line"; done
+bash "$HERE/barza-up.sh" 2>&1 | while IFS= read -r line; do wlog "up: $line"; done
 wlog "fix cycle done; next probe in 300 s"

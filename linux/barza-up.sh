@@ -17,13 +17,15 @@
 # would fight over host.json.
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+HERE="$(cd "$(dirname "$0")" && pwd)"
+ROOT="${BARZA_ROOT:-$(dirname "$HERE")}"   # the git working tree (record, address book, tunnel.log)
 cd "$ROOT"
 PORT="${BARZA_PORT:-8901}"
 LOCAL="http://127.0.0.1:$PORT"
 URL_RE='https://[a-z0-9-]+\.trycloudflare\.com'
 # One at a time: two runs (the watchdog and a human, say) would each mint a
-# tunnel and publish different names.
+# tunnel and publish different names; barza-deploy.sh holds it too while
+# it restarts the service.
 exec 9>"$ROOT/.barza-up.lock"
 if ! flock -n 9; then echo "another barza-up.sh is running; nothing to do"; exit 0; fi
 
