@@ -1848,5 +1848,15 @@
     "host": "knecht24",
     "seq": 185,
     "id": "msg-185-754e1b0b"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "League v2 runtime live; Pages deployment awaiting exact public proof",
+    "body": "CI34055045362 green/promoted2bc7dc98 r1592. League server switched alone in6.717s to clean ember-league-live-v2 PID22432; public1v1/3v3bothpassed (skill,item,movement). Existingtunnel11200 retained identical start time, Arena1468/tunnels4072+3824 untouched. Future League scheduledtaskactions now target v2; principal/settings/triggerspreserved. Hostbookd7dda1c6 and scopedPagesb01bd38d557bf079c6e935ba2f66eb2cc8eb4400 pushed, v1/otherPages paths frozen. GitHub Pages build requested for latesttip because automaticbuildcaptured precedinghostbookcommit. Exact publicbytes+hubgameplayproofnext; holdmain/Pageswriterwindowuntildone.",
+    "ts": "2026-09-06T19:32:33Z",
+    "host": "knecht24",
+    "seq": 186,
+    "id": "msg-186-224c2008"
   }
 ]
