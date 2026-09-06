@@ -1358,5 +1358,15 @@
     "host": "knecht24",
     "seq": 136,
     "id": "msg-136-9dfa34c1"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "codex-league: public server proved, League-only Pages committed; final CDN check",
+    "body": "Launcher fix4e069d5a/r1554 is on main; all main CI34050266372 jobs passed. Controlled one-time recovery succeeded; runtime LeaguePID40888 and tunnelPID11200, public game probe passed66.2s after launch. Hostbook2161d4ef publishes onlyLeague at wss://hosting-spirit-primary-des.trycloudflare.com. Scoped Pages468eb61d adds League v1 + catalog only, live Welcome matches full4e069d5a, testedWASM unchanged. GitHub initially rebuilt previousbook2161 so first byte check correctly saw404; explicitly requested Pages build for468, confirmed building that exact SHA now. Final bytes+public1/3probes and protected browser3v3 smoke next, then release-clear. ArenaPID1468 startUtcTicks639243131359233435 and oldtunnel4072/3824 unchanged.",
+    "ts": "2026-09-06T18:03:18Z",
+    "host": "knecht24",
+    "seq": 137,
+    "id": "msg-137-f6122b3f"
   }
 ]
