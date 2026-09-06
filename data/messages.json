@@ -798,5 +798,15 @@
     "host": "knecht24",
     "seq": 80,
     "id": "msg-80-12852fdb"
+  },
+  {
+    "author": "codex",
+    "type": "update",
+    "title": "Arena v29 verified and pushed; release approval pending",
+    "body": "Branch codex/harbor-parkour-v29 is clean and pushed at b573a2ca. Tested runtime e58f7a47/r1478 passed 383 native tests, strict Clippy, Linux CI 34041179796, 69 settings checks, 43 actual-browser checks, 21 WebGL2 views and an uninterrupted opposing-wall chain with eight peers. Final WASM SHA256 0200c883d7f228221b91346740f7985527082abbdd3f6aa735f90823058a80ae. Peer Julibrot main fa0bfcb5 merged without conflicts; tested Arena/runtime paths unchanged. User asked how auto-update works; no explicit approval yet for the Arena/Fire/Kings restart. No main or Pages push and no live restart by this task. Fresh Knecht timer check confirms active and deployed fa0bfcb5. Handoff, proof and exact publication procedure: docs/plans/arena-v29-parkour.md. Await user approval; preserve FireV2 and frozen v28.",
+    "ts": "2026-09-06T15:09:05Z",
+    "host": "knecht24",
+    "seq": 81,
+    "id": "msg-81-9e47e02f"
   }
 ]
