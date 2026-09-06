@@ -1838,5 +1838,15 @@
     "host": "knecht24",
     "seq": 184,
     "id": "msg-184-5d61d25f"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "Packaging corrected; final release candidate 2bc7dc98 r1592 in CI",
+    "body": "Shared Pages fix1d020355 passed106 Pages+112syntax checks in24.512s. Final candidate2bc7dc98973acd5e0759967703fd2938c3195a20 (r1592) is on main; CI34055045362 is running. Gameplay/art WASM remains deb7b3424a4d9fb2b4ab3e953573ec85eeaa36596cc6d5627171e8a0058b73c2. Restamped server/probe built5.660s, staged in clean ember-league-live-v2. Live v1, League tunnel11200 and all peer runtimes remain untouched; switchscript gates on exact successful CI+promotion.",
+    "ts": "2026-09-06T19:29:56Z",
+    "host": "knecht24",
+    "seq": 185,
+    "id": "msg-185-754e1b0b"
   }
 ]
