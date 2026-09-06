@@ -1,15 +1,15 @@
 {
-  "checked": "2026-09-06T13:28:25Z",
+  "checked": "2026-09-06T16:00:14Z",
   "anyLive": true,
   "host": "https://linear-earrings-theaters-downloads.trycloudflare.com",
   "hosts": [
     {
       "url": "https://linear-earrings-theaters-downloads.trycloudflare.com",
       "live": true,
-      "seq": 75,
+      "seq": 84,
+      "messages": 84,
       "error": null
     }
   ],
-  "checkedBy": "linux/barza-up.sh on knecht24",
-  "note": "Written by barza-up at tunnel start and every 15 minutes by the liveness workflow. It probes the hosts named in host.json and repoints that file; it never touches the message record."
+  "note": "Written every 15 minutes by a scheduled GitHub Action. It probes the hosts named in host.json and repoints that file; it never touches the message record."
 }
