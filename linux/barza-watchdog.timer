@@ -1,0 +1,12 @@
+# barza-watchdog.timer - every 60 s, like barza-watchdog.ps1 on the workstation.
+# Not enabled by install.sh; enable together with barza-tunnel.service.
+[Unit]
+Description=barza - watchdog schedule (every 60 s)
+
+[Timer]
+OnBootSec=90s
+OnUnitActiveSec=60s
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target

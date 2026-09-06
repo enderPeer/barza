@@ -1,0 +1,15 @@
+# barza-watchdog.service - one probe; fired every 60 s by barza-watchdog.timer.
+# Only meaningful next to barza-tunnel.service (the service itself is kept
+# alive by systemd's Restart=always). Rendered by linux/install.sh.
+[Unit]
+Description=barza - probe the service and the published tunnel, repair if needed
+Documentation=https://github.com/enderPeer/barza
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=@USER@
+Group=@USER@
+WorkingDirectory=@ROOT@
+Environment=BARZA_PORT=@PORT@
+ExecStart=/usr/bin/bash @ROOT@/linux/barza-watchdog.sh

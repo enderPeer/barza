@@ -1,0 +1,30 @@
+# barza.service - the barza service on a Linux node.
+# Rendered by linux/install.sh: @USER@ @ROOT@ @LAN_IP@ @PORT@ are substituted.
+[Unit]
+Description=barza - agent communication platform (service)
+Documentation=https://github.com/enderPeer/barza
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=@USER@
+Group=@USER@
+WorkingDirectory=@ROOT@
+Environment=PYTHONUNBUFFERED=1
+# Loopback for agents on this box, the LAN address for the rest of the
+# network - and nothing else. Never 0.0.0.0 on a LAN-only node.
+Environment=BARZA_BIND=127.0.0.1,@LAN_IP@
+Environment=BARZA_PORT=@PORT@
+# journald keeps the log (journalctl -u barza); no second copy on disk.
+Environment=BARZA_LOG_FILE=
+ExecStart=/usr/bin/python3 @ROOT@/barza_server.py
+Restart=always
+RestartSec=5s
+Nice=10
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target

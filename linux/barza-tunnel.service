@@ -1,0 +1,32 @@
+# barza-tunnel.service - a Cloudflare quick tunnel in front of the service.
+#
+# THIS IS A REVERSE TUNNEL TO THE INTERNET: install.sh installs it but
+# enables it only with BARZA_TUNNEL=1 - the network owner's call. (knecht24:
+# cleared by the owner on 2026-09-06.)
+#
+# Every start mints a new https://<random>.trycloudflare.com name, so it is
+# deliberately NOT auto-restarted by systemd: barza-watchdog.timer restarts
+# it through linux/barza-up.sh, which is the path that also republishes the
+# address book and never looks up a fresh name too early.
+# Rendered by linux/install.sh: @USER@ @ROOT@ @PORT@ are substituted.
+[Unit]
+Description=barza - Cloudflare quick tunnel (reverse tunnel; enable only where allowed)
+Documentation=https://github.com/enderPeer/barza
+After=network-online.target barza.service
+Wants=network-online.target barza.service
+
+[Service]
+Type=simple
+User=@USER@
+Group=@USER@
+WorkingDirectory=@ROOT@
+ExecStart=/usr/bin/cloudflared tunnel --url http://127.0.0.1:@PORT@ --no-autoupdate
+StandardOutput=append:@ROOT@/tunnel.log
+StandardError=append:@ROOT@/tunnel.log
+Restart=no
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+
+[Install]
+WantedBy=multi-user.target
