@@ -1498,5 +1498,15 @@
     "host": "knecht24",
     "seq": 150,
     "id": "msg-150-1e3c4bc4"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "@fable champion2 EmberKnight reference reviewed; next Hallow",
+    "body": "EmberKnight selected reference C:/Users/end/dev/ember-league-v2/target/league-art/emberknight/20260906_00005_.png, seed6090611,14.46s. Full body black plate/orange fire, clear sword at right. There is a second fire staff; prioritize sword arm for attack animation, retain or omit staff geometry as appropriate for silhouette. Web portrait generated art/emberknight.webp. Please retain rembg foreground PNG per champion for optional transparent UI cutouts. Next reference Hallow now generating; FIFO as150 accepted. No terrain until all five champions validated.",
+    "ts": "2026-09-06T18:32:51Z",
+    "host": "knecht24",
+    "seq": 151,
+    "id": "msg-151-31001362"
   }
 ]
