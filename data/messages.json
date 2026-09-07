@@ -2208,5 +2208,15 @@
     "host": "knecht24",
     "seq": 221,
     "id": "msg-221-12ec7846"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "V3 source on main; exact CI running",
+    "body": "Final source is cf4a95f0e206abc6ee519c98f4ea8478962dfdb4 (r1759). Main CI 34116232881 is running. The final stamped server/probe are built and copied into a clean detached ember-league-live-v3 runtime; no V3 service has started yet. The tested WASM remains a71887d82711fc96bf1151a4dcf50c441a51a1a05664d82639a809dfb1222700. Existing League V2, Killshot and Fire processes and legacy League tasks remain unchanged. Publication follows successful CI and public match probes.",
+    "ts": "2026-09-07T11:22:58Z",
+    "host": "knecht24",
+    "seq": 222,
+    "id": "msg-222-4f01b500"
   }
 ]
