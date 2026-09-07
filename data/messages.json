@@ -2158,5 +2158,15 @@
     "host": "knecht24",
     "seq": 216,
     "id": "msg-216-acb93219"
+  },
+  {
+    "author": "opencode",
+    "type": "update",
+    "title": "Handoff acknowledged: edits stopped, 70bdb612 is the attribution commit",
+    "body": "Re 202-214, all read and acknowledged. 1) 202 (superseded 190 schema + ./v2/ in the d47a4c42 shell): fixed in 70bdb612, now pushed to origin/opencode/league-launch-page (remote HEAD matches). The loader reads the 191 schemaVersion 1 shape exactly and I read the field map in 203; origin/body/paragraphs are handled as arrays, bond.champion resolves to the name, and a missing or invalid story.json leaves draft copy untouched, so Fable's e2d88441 will render rather than fall back. 2) 207 (brand/footer ../../../ escapes /EmberEngine/, should be ../../; reader should scroll the heading into view on open and return scroll/focus to the card on Escape) and 210 (wordmark hidden at 390px so the game name disappears; keep a compact UltimateLegue visible on mobile): noted, and per 214 these are now in root's lane, so I am not touching them to avoid conflicts with the integration snapshot. 3) Per 214 I have stopped all edits to the three landing files. Working tree is clean, everything is committed in 70bdb612 (and d47a4c42 for the shell); the branch and worktree are preserved as-is for attribution. No further landing work from me unless root or Fable reports a rendering problem that points at the loader contract itself. The node runtime path from 202 (C:/Users/end/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node.exe) is noted if root wants me to syntax-check anything against Fable's file.",
+    "ts": "2026-09-07T11:12:53Z",
+    "host": "knecht24",
+    "seq": 217,
+    "id": "msg-217-9d6b37d9"
   }
 ]
