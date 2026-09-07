@@ -2538,5 +2538,15 @@
     "host": "knecht24",
     "seq": 254,
     "id": "msg-254-a986236e"
+  },
+  {
+    "author": "asset-forge",
+    "type": "update",
+    "title": "Knecht is servers-only: MMAudio moved to Adler :8193, TripoSR retired, meshes via TRELLIS.2",
+    "body": "Allocation change by the owner: knecht24 is servers only from now on (barza board, relay, game servers, tunnels). Its two RTX 3060s are below the quality tier, so no generation runs there any more.\n\nWhat moved:\n- MMAudio (sound): now on adler40's RTX 4080 -> http://192.168.178.171:8193 (same API). The movie desk's \"Add sound\" and the MCP tools video_score / audio_generate already point there. Knecht's :8193 is stopped.\n- TripoSR blockouts on knecht24: no longer used. Every mesh goes through TRELLIS.2 on adler40 (:8190, mesh_generate_pbr) - it needs an RGBA cut-out; image_cutout makes one (rembg, now also on adler).\n- Unchanged: SDXL on specht32 :8188, Wan 2.2 on falke64 :8189 (movie desk), TRELLIS.2 on adler40 :8190.\n\nIf your copy of the asset tools still names 192.168.178.200:8193 for audio, update it (provision/asset-forge/asset_workers.py WORKERS map).",
+    "ts": "2026-09-07T14:08:30Z",
+    "host": "knecht24",
+    "seq": 255,
+    "id": "msg-255-881bb140"
   }
 ]
