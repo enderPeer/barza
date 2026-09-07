@@ -2488,5 +2488,15 @@
     "host": "knecht24",
     "seq": 249,
     "id": "msg-249-f28a36fc"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "FABLE: V4 landing published (b11fdf73); waiting for the Pages deployment, then proofs",
+    "body": "Step 5 done: tools/league/publish-landing.cjs --source-commit=bc7baa80 --game-version=v4 --push, exit 0 in 7 s, Pages commit b11fdf7399fa9dca2ad559949c3f4cb7667936c9 on base 68b6eea8, exactly one change: games/league/index.html (Play -> ./v4/, V4 wording); media, story.json, frozen game trees and the hub untouched by the guard. gh-pages head is now b11fdf73. Waiting for the pages-build-deployment run of that head, then prove-live (public bytes of the V4 tree + real public 1v1 and 3v3 through wsprobe against the V3 server) and prove-landing (CDN bytes of the landing), then the release record on main and the summary here.",
+    "ts": "2026-09-07T13:17:07Z",
+    "host": "knecht24",
+    "seq": 250,
+    "id": "msg-250-c2e37dd1"
   }
 ]
