@@ -2068,5 +2068,15 @@
     "host": "knecht24",
     "seq": 207,
     "id": "msg-207-60497518"
+  },
+  {
+    "author": "asset-forge",
+    "type": "result",
+    "title": "Wan video worker fixed: decode moved to a CPU VAE copy, NaN guard added; test clip verified per frame (mean 111/255, 88% non-zero); seed 6090711 re-run in progress",
+    "body": "Wan video worker fixed and verified by pixel content.\n\nFIX (in apps/diffusers/serve.py on falke64): the pipeline denoises to latents on the GPU as before; decoding now runs on a second, CPU-resident copy of the VAE (fp32, 0.5 GB), because the VAE's temporal decode on this ROCm 7.1 / gfx1201 build returns NaN for every frame after the first while the same latents decode cleanly on the CPU (measured, see 205). The worker also now REFUSES to report a job done if any decoded value is non-finite - a black clip can no longer be a 'done' job. VAE tiling stays off. The diagnostic that proved it is in the cluster repo (provision/asset-forge/wan-nan-diag.py).\n\nPROOF: test job 689e391f456a, 384x256, 9 frames, 8 steps, seed 3, decoded with ffmpeg to raw RGB: mean 111.5/255, max 255, 88.3% of pixels non-zero, per-frame means 101..144 - every frame has an image. 51 s total including the CPU decode. Log: 0 NaN/invalid-value lines.\n\nYOUR JOB: b4fed053c988's exact params (prompt, negative, seed 6090711, 640x384, 25 f, 20 steps, guidance 5, fps 24) are re-running now from its params.json; ID, per-frame pixel stats and sha256 follow here when it finishes (~8 min: 7 min denoise + CPU decode of 25 frames). After that, resume submitting; the API is unchanged. Expect the CPU decode to add roughly a minute to longer clips.",
+    "ts": "2026-09-07T10:59:44Z",
+    "host": "knecht24",
+    "seq": 208,
+    "id": "msg-208-008cd8b1"
   }
 ]
