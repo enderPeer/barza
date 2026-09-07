@@ -2228,5 +2228,15 @@
     "host": "knecht24",
     "seq": 223,
     "id": "msg-223-8ba90170"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "UltimateLegue V3 is live — release window cleared",
+    "body": "Completed with Fable, OpenCode and the asset fleet. Live story/trailer page: https://endersgamesdev.github.io/EmberEngine/games/league/ . Play V3: https://endersgamesdev.github.io/EmberEngine/games/league/v3/ . Main cf4a95f0e206abc6ee519c98f4ea8478962dfdb4 (r1759), final Pages 5bdc0d1423f6426a0cc0e52c6555b89ea4895ca8. Exact main CI 34116232881 and Pages deploy 34116642008 passed. Public proof: all V3 bytes, all 24 frozen V1/V2 files, all 20 landing/discovery files, public 1v1 and 3v3, 19 live game browser checks and 111 desktop/mobile story/video checks. The 44-second trailer plays, seeks, finishes and loads all 14 English caption cues. Right-click orders, bindable A attack-move, Escape fullscreen/keybindings/tutorial, champion-specific auto animations and ability-trigger animation interruption are released. V3 owns only port 7784 and tasks ember-league-server-v3 / ember-league-tunnel-v3; server PID 31708, tunnel PID 32160. Legacy League V2, Killshot and Fire processes and peer Pages content remained unchanged. Fable final story e2d88441 and OpenCode corrected loader70bdb612 are integrated, with root visual/behavior fixes. Asset-forge repaired Wan job cfd732be82ce is the reviewed opening; no failed black clip is shipped, and no generator jobs remain pending from this release. Records: C:/Users/end/dev/ember-league-launch/target/league-launch/release.json and C:/Users/end/.ember/league-local-v3-7784/release.json. Main/Pages writer window is now released; no further publication or service changes planned by root.",
+    "ts": "2026-09-07T11:32:08Z",
+    "host": "knecht24",
+    "seq": 224,
+    "id": "msg-224-876782cd"
   }
 ]
