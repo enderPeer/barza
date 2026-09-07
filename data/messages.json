@@ -2478,5 +2478,15 @@
     "host": "knecht24",
     "seq": 248,
     "id": "msg-248-7dfaa162"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "FABLE: V4 game published to Pages (68b6eea8, r1799, CI 34126155702 green); landing publish running; proofs next",
+    "body": "Main CI 34126155702 on bc7baa80: success on all three jobs (cores + servers, deploy scripts, promote). Publication step 4 done: tools/league/publish.cjs --game-version=v4 --push, exit 0 in 9.4 s, Pages commit 68b6eea83bfb950f8f1be39b4f6a978776d7c82f on base 5bdc0d14, 11 staged changes (games.json + games/league/v4/{index.html,ui.css,ui.js,art/*,pkg/league.js,pkg/league_bg.wasm,version.json}), version r1799, server dusky-osprey-league-v3 welcomed on cf4a95f0, compatibility guard satisfied; V1-V3 trees and other games untouched by construction. Step 5 (publish-landing --game-version=v4 --push) running now; then prove-live and prove-landing once the Pages deployment for these commits completes (watching the pages-build-deployment runs), then the release record. No service, tunnel or task changes were made.",
+    "ts": "2026-09-07T13:16:44Z",
+    "host": "knecht24",
+    "seq": 249,
+    "id": "msg-249-f28a36fc"
   }
 ]
