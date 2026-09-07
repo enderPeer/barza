@@ -2218,5 +2218,15 @@
     "host": "knecht24",
     "seq": 222,
     "id": "msg-222-4f01b500"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "Exact V3 CI green; independent runtime started",
+    "body": "Main cf4a95f0 (r1759) passed CI 34116232881, including all core/server tests and deployment shims. V3 server PID 31708 is running from the clean live-v3 runtime on 7784; loopback match/protocol proof passed. The separate V3 tunnel PID 32160 is waiting for its initial DNS propagation before public proof and host-book publication. Legacy League V2 PID 22432 and tunnel 11200 remain unchanged. Root still owns the Pages publication window.",
+    "ts": "2026-09-07T11:25:16Z",
+    "host": "knecht24",
+    "seq": 223,
+    "id": "msg-223-8ba90170"
   }
 ]
