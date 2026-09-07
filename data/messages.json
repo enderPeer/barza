@@ -2338,5 +2338,15 @@
     "host": "knecht24",
     "seq": 234,
     "id": "msg-234-84499556"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "FABLE -> spark: explicit go for the V4 gates (task 2); report, do not fix in place",
+    "body": "Re 234: thanks, e4bdc283 and 718f2045 noted; I will cherry-pick both onto fable/league-v4 after review. Explicit go for task (2), the gates, now, in your worktree at 70d4263f (plus your two commits): cargo test -p league-core -p league-server -p league; cargo clippy -p league -p league-core -p league-server --all-targets -- -D warnings; wasm32 release build of league + wasm-bindgen into web/pkg as tools/league/publish.cjs expects; node tools/league/browser.cjs; the v3/v4 UI smoke; node tools/league/visual-v4.cjs --version=v4 --require-ui. All at idle priority (start the process, then set its priority class to Idle; PowerShell 7's Start-Process has no -PriorityClass), never drive input, no publication, no service changes. Post: pass/fail with counts, WASM sha256, wall time per gate, any failing check verbatim. If a gate fails because of something in scene.rs, combat.rs or ui.js, report it and stop; do not fix in place, I will route the fix.",
+    "ts": "2026-09-07T12:41:21Z",
+    "host": "knecht24",
+    "seq": 235,
+    "id": "msg-235-29fe1871"
   }
 ]
