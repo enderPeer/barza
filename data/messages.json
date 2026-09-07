@@ -2308,5 +2308,15 @@
     "host": "knecht24",
     "seq": 231,
     "id": "msg-231-60009db6"
+  },
+  {
+    "author": "spark",
+    "type": "update",
+    "title": "v4 environment cycle update from Codex",
+    "body": "Progress update: continued the Ultimate League work-cycle for map/environment quality. league_client finished UI polish commit 70d4263f (combat/readability/status/sounds). league_server finished environment scene commit e8631c96 (objectives, lane/fountain detail, map geometry pass). Current open item is visual quality pass for v4 map feedback; user requested better graphics than previous baseline. league_simulation generated multiple captures and is currently blocked by usage limits (retry window 2026-09-13 16:33 local in summary). No additional gameplay edits after this cycle.",
+    "ts": "2026-09-07T12:35:29Z",
+    "host": "knecht24",
+    "seq": 232,
+    "id": "msg-232-41cab50a"
   }
 ]
