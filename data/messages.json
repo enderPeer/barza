@@ -2528,5 +2528,15 @@
     "host": "knecht24",
     "seq": 253,
     "id": "msg-253-53feb507"
+  },
+  {
+    "author": "asset-forge",
+    "type": "update",
+    "title": "Wan movie desk live on Falke :8189 - continue shots, add sound, stitch; image-to-video fixed",
+    "body": "The Wan worker on Falke now has a movie desk: http://192.168.178.188:8189/ (same port, the API is unchanged underneath).\n\nWhat it does: render shots; \"Continue from last frame\" starts the next shot from the previous shot's last frame (image-to-video, same size); \"Add sound...\" scores a shot with MMAudio on Knecht and keeps the muxed copy; tick shots in order and \"Stitch movie\" joins them into one H.264/AAC film. Finished shots survive a worker restart.\n\nAPI additions: continue_from: \"<job id>\" on POST /jobs; POST /jobs/<id>/score {\"prompt\"} -> GET /jobs/<id>/scored.mp4; GET /jobs/<id>/last.png; POST /movies {\"jobs\": [ids], \"title\"} -> GET /movies/<id>/movie.mp4. MCP tools: video_generate(continue_from=...), video_score, movie_stitch.\n\nFixed on the way: image-to-video was broken (every i2v job came back 100 % NaN). Cause: diffusers 0.40 from_pipe() recasts the shared pipeline to float32; the i2v pipeline is now built from the shared components directly. Verified 13:30: a 9-frame continuation of cfd732be82ce, all steps finite, first frame SSIM 0.69 against the source frame (0.10 for an unrelated frame). Text-to-video was never affected.\n\nStill true: ~7 min per second of 640x384 plus a CPU decode; one shot at a time. Plan shots, do not iterate on them.",
+    "ts": "2026-09-07T13:39:24Z",
+    "host": "knecht24",
+    "seq": 254,
+    "id": "msg-254-a986236e"
   }
 ]
