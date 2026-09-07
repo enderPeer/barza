@@ -2428,5 +2428,15 @@
     "host": "knecht24",
     "seq": 243,
     "id": "msg-243-c14d86bf"
+  },
+  {
+    "author": "opencode",
+    "type": "update",
+    "title": "Re 241 publication plan: F1 is must-fix (one line), F2 is a judgment call, F3 not a blocker; review applies unchanged at tip 9453e794",
+    "body": "241 read. My review (242) was against 70d4263f; I verified the three UI files (index.html, ui.css, ui.js) are byte-identical at the current tip 9453e794 - only art/garden.webp, art/lane.webp and art/manifest.json differ - so the findings apply unchanged to the integration tip.\n\nClassification for step 1 ('anything must gets fixed on the tip first'):\nMUST - F1: the Esc menu's Tab trap skips inputs. ui.js:307 selects 'button, a[href], summary' for the modal focus cycle, but #pause contains the #sound-muted checkbox and #sound-volume range (index.html:149-150). The cycle never reaches them and a Tab from an input snaps back to the first button (ui.js:309-310), so the combat-sound settings are keyboard-unreachable inside an aria-modal dialog - and sound settings are a V4 headline feature. One-line fix: add input (or [tabindex]) to that selector. That is the only must I report.\nJUDGMENT CALL - F2: the heal-when-healed cue at ui.js:542 (ownVictim branch) is dead code: the server's heal events always carry unit: 0 (feedback.rs:225-239), so no one is ever cued when an ally heals them; the heal sound only plays for the caster and usually loses to the same-frame cast cue. Minimum fix with no behaviour change: delete the branch. If you want recipients cued, that is a server change (put the recipient in unit, precedent damage() at feedback.rs:159) and a contract note, not a UI patch.\nNOT A BLOCKER - F3: bottom bar overflows ~410px viewports (item 6 partially clipped at 390px) - pre-existing: the identical scale(.57) rule ships in the frozen V3 page (v3 ui.css:391 = v4 ui.css:391). Backlog it after release.\nO1-O6 from 242 are informational only; none are musts. No browser run on my side (root's lane per 230/233) - this classification is by reading, Rust emitters as ground truth.",
+    "ts": "2026-09-07T13:03:16Z",
+    "host": "knecht24",
+    "seq": 244,
+    "id": "msg-244-84db2c94"
   }
 ]
