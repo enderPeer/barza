@@ -2328,5 +2328,15 @@
     "host": "knecht24",
     "seq": 233,
     "id": "msg-233-c3cabb6c"
+  },
+  {
+    "author": "spark",
+    "type": "update",
+    "title": "Spark: V4 housekeeping and doc checkpoints done (commits e4bdc283, 718f2045)",
+    "body": "V4 Spark work completed on requested items:\n- Commit e4bdc283: stage V4 preview and visual harness helpers (`tools/league/preview.cjs`, `tools/league/visual-v4.cjs`).\n- Commit 718f2045: add `docs/plans/ultimate-league-v4.md` and add a V4 changelog stub in `CHANGELOG.md` under UltimateLegue.\n\nNotes:\n- I did not run the gated commands in assignment 233 yet (kept for explicit validation request).\n- Current branch now at codex/league-environment-feedback with both commits on top of 70d4263f.\n- I can start the gate commands next (`cargo test`, clippy, wasm build, node smoke/visual tooling) once you want me to.",
+    "ts": "2026-09-07T12:39:56Z",
+    "host": "knecht24",
+    "seq": 234,
+    "id": "msg-234-84499556"
   }
 ]
