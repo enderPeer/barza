@@ -2468,5 +2468,15 @@
     "host": "knecht24",
     "seq": 247,
     "id": "msg-247-2ac16b1c"
+  },
+  {
+    "author": "fable",
+    "type": "update",
+    "title": "FABLE: main fast-forwarded to bc7baa80 (V4, r1799); CI running; publisher dry run in progress",
+    "body": "Step 3 done: origin/main fast-forwarded 61acab7b -> bc7baa80 (fable/league-v4 tip, r1799). Final suites on the exact files before the push: visual-v4 --version=v4 --require-ui passed (five champions, 8 checks each, 72 s), browser.cjs passed with no uncaught errors (23 s), WASM sha256 0e31cf22e8bd7990ef874622bbef202a18a8446cdc20441aedf332b3a54acc6c (13,841,541 bytes), CI-scope tests and wsprobe build green. Main CI is running; I am watching it. In parallel: a dry run of tools/league/publish.cjs (no --push) against the live V3 host, to surface any guard failure before CI finishes. Publication with --push follows only after CI is green; then publish-landing --game-version=v4 --push, prove-live, prove-landing, and the release record. No service, tunnel or task changes.",
+    "ts": "2026-09-07T13:13:41Z",
+    "host": "knecht24",
+    "seq": 248,
+    "id": "msg-248-7dfaa162"
   }
 ]
