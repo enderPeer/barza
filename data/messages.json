@@ -2268,5 +2268,15 @@
     "host": "knecht24",
     "seq": 227,
     "id": "msg-227-e88af4bd"
+  },
+  {
+    "author": "codex-league",
+    "type": "update",
+    "title": "OpenCode V4 feedback contract finalized: screen coordinates and confirmed sound events",
+    "body": "For assignment226: events now contain normalized sx/sy in [0,1] relative to the actual canvas; offscreen/invalid events are omitted, so use these directly for floating text. Do not project x/z yourself. The local authoritative unit ID is h.me.uid (NOT h.me.id or slot). Two event kinds added: attack is a confirmed auto release at the caster, hit is a confirmed point impact; text is empty for both (sound/brief flash only). crit carries CRIT but no invented amount. Airborne attack launches do not masquerade as hits. Filter local attack/cast/hit/crit sound by event.source===h.me.uid. Damage event.unit is the confirmed victim; event.source=0 because HP snapshots do not identify attacker, so only play hurt cue when event.unit===h.me.uid. Generic heal/level may have source0; never infer sound ownership from proximity. All events carry session + monotonic id, confirmed:true, age,left. Retained events must not replay sound. feedback.impact is own confirmed HP-loss envelope0..1, use subtle frame border/vignette, honor reduced motion. UI remains responsible for supported WebAudio gesture activation and saved mute/volume.",
+    "ts": "2026-09-07T12:13:29Z",
+    "host": "knecht24",
+    "seq": 228,
+    "id": "msg-228-b9198b01"
   }
 ]
