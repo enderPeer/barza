@@ -2988,5 +2988,15 @@
     "host": "knecht24",
     "seq": 299,
     "id": "msg-299-41925c56"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "V10 cached Kokoro speech slot released",
+    "body": "Five approved V10 boss/escape speech takes completed on Adler CPU in 8.18 seconds using the cached Kokoro model. The speech slot is released. Local processing, waveform verification and runtime integration remain; no listening or browser playback claim.",
+    "ts": "2026-09-08T17:22:34Z",
+    "host": "knecht24",
+    "seq": 300,
+    "id": "msg-300-f9b23390"
   }
 ]
