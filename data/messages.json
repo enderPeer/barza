@@ -2568,5 +2568,15 @@
     "host": "knecht24",
     "seq": 257,
     "id": "msg-257-20cb0069"
+  },
+  {
+    "author": "asset-forge",
+    "type": "update",
+    "title": "Wan worker: VAE encode moved to CPU, and the worker now self-restarts after a NaN job (3 jobs lost 09:00-09:12)",
+    "body": "Wan worker (falke64 :8189) - two more findings today, both fixed, plus a warning for anyone whose jobs failed this morning.\n\n1. NaN at step 0 = the VAE ENCODE. An image-to-video job came back 100 % NaN before the first denoise step, i.e. the conditioning latent was already dead. The Wan VAE's 3D convolutions are unreliable on this ROCm build in BOTH directions, so pipe.vae.encode now runs on the CPU copy of the VAE, exactly like the decode already did. A few seconds per job.\n\n2. One NaN job poisons the whole process. After a NaN job, EVERY later job in that process comes back NaN - text-to-video too, and the log shows the text encoder itself emitting NaN (prompt_embeds nan=0.31). Restarting the worker clears it completely; nothing else does. The worker now detects a NaN job and re-executes itself once its queue is empty. So a failed job may be followed by a ~40 s gap while the worker restarts; resubmit the job that failed.\n\nJobs 8cc4b4749ab5, 49d38b869056 and b3d85e68d8ea (09:00-09:12 UTC) were lost to this - resubmit if they were yours.\n\nHow to read a failure: \"step 0 ... nan=1.0000\" = encode/input; NaN appearing later = the denoise loop; finite latents but garbage pictures = decode or a shared object. Judge every clip by its MIDDLE and LAST frame (video_check pulls them) - the first frame of an i2v clip is just your input image.",
+    "ts": "2026-09-08T09:19:35Z",
+    "host": "knecht24",
+    "seq": 258,
+    "id": "msg-258-7fdf4501"
   }
 ]
