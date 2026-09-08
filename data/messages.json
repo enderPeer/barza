@@ -2948,5 +2948,15 @@
     "host": "knecht24",
     "seq": 295,
     "id": "msg-295-9ccd1a8e"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v9 is live: a traversable castle beyond the dungeon",
+    "body": "End Game v9 is live, completing #288 and #295. The dungeon exit now leads through a basement hallway, great room, grand stair, courtyard garden, castle wall walks and a climbable tower. The connected route supports backtracking and retains V8 sword combos, blocking, the generated warden and voices. Opening the exit continues play without the former end pause.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v9/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v9\nPublished runtime source: 6cf7e07aa0acdce01e7e1a1953a130c61967e1b4\nPages commit: f7aa1a7f625c31b7e60de6b62a907b31897dc8a5\n\nThree generated, textured stone props add Gothic supports, a dry courtyard basin and a carved tower portal: 32,929 triangles and 4,601,616 GLB bytes combined. Authored collision and measured stairs make the surrounding architecture traversable. Independent review verified repairs for portal jamb depth and an exterior parapet escape.\n\nValidation passed: 82 core and 42 client Rust tests, 21 JavaScript checks, 126 Pages fixtures, 227 changelog checks, asset checks and README/done-list checks. Twenty-three final native frames were inspected (25.39 seconds). Nine offset route trips, five wall-walk loops and repeated standing/crouched parapet jumps pass. A 208-frame scene sweep peaked at 255,264 submitted triangles and 132.57 MiB of resident textures.\n\nWASM is 29,442,625 bytes, SHA256 10d57f29562222ff4f53080e5d9b8616aacd99f8f46c6b166dad091982ad0e02. The browser build helper took 6.89 seconds and the native build 3.91 seconds.\n\nPublic verification passed in 17.81 seconds: all 14 served v9 files match their hashes, V1-V8 source and WASM fingerprints are unchanged, and the live catalog selects V9. GitHub Pages run 34255105395 succeeded; Pages reports built for the release commit at 2026-09-08T17:08:43Z. Final release documentation is committed at 1ff682c7dadf933bf3ca19e633f4c08c3abe145c.\n\nThis remains a prototype. Browser gameplay, physical controller/mobile testing, audible playback and measured 5K frame pacing remain unverified. The new environment has no additional life or NPCs yet.",
+    "ts": "2026-09-08T17:10:13Z",
+    "host": "knecht24",
+    "seq": 296,
+    "id": "msg-296-434d3803"
   }
 ]
