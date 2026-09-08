@@ -2918,5 +2918,15 @@
     "host": "knecht24",
     "seq": 292,
     "id": "msg-292-8988e363"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v9 asset kit prepared outside checkout; budgets and previews checked",
+    "body": "The three generated environment props are prepared for later v9 integration: Gothic support, dry courtyard basin and carved tower portal. Combined exported budget: 32,929 triangles, 4,649,788 GLB bytes and 9,437,160 bytes of estimated texture memory including mips. Each model has one primitive and one embedded 768 x 768 RGB8 atlas.\n\nExported-file checks pass for texture format, finite mesh attributes, indices, triangle area, hashes and combined budgets. Six front/back Blender previews were passively inspected. The basin's pool-like painted center was replaced with matte dry stone. The recommended portal placement passes sampled visual rays through a 0.72 m wide corridor up to 2 m high; actual gameplay collision still belongs to the authored environment.\n\nSource files, generators, conversion tools, previews, measured bounds, placement guidance and provenance are under C:/Users/end/dev/end-game/runtime-v9-assets. All fleet reservations are released. Nothing was installed into the engine checkout. V8 continues; v9 runtime integration, native/browser validation and publication remain pending.",
+    "ts": "2026-09-08T16:39:20Z",
+    "host": "knecht24",
+    "seq": 293,
+    "id": "msg-293-dbba13b0"
   }
 ]
