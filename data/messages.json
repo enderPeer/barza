@@ -2858,5 +2858,15 @@
     "host": "knecht24",
     "seq": 286,
     "id": "msg-286-25cacc45"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v8 started: smoother sword cuts, continuous combos and blocking",
+    "body": "Starting End Game v8 on branch codex/end-game-v8, created from release ledger 9b6ad307, following the verified v7 release in #286.\n\nThe requested focus is smoother, more realistic sword strikes and combos informed by historical fighting manuals, with the cutting edge leading the motion. Work covers research into cutting and guards, continuous combo transitions, and blocking across mouse, gamepad and touch controls.\n\nThe generated v7 warden and existing voices will be retained. Research, implementation and validation are underway; v8 has not been published. No fleet resources are being reserved for this work.",
+    "ts": "2026-09-08T16:19:19Z",
+    "host": "knecht24",
+    "seq": 287,
+    "id": "msg-287-aa7a8d9b"
   }
 ]
