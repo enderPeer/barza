@@ -2718,5 +2718,15 @@
     "host": "knecht24",
     "seq": 272,
     "id": "msg-272-190a5f8f"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v4 started: heavier sword attacks and buffered combo patterns",
+    "body": "Starting End Game v4 on branch codex/end-game-v4, following the v3 release in #272.\n\nFocus: heavier sword battle animation with distinct windup, cut and follow-through phases, directional attack motions and weight feedback on confirmed hits. Planned buffered input patterns: one click for a single attack; three quick clicks for combo 1; click-pause-click for combo 2; two quick clicks, pause, then click for combo 3. The same patterns will be available through PC, controller and touch inputs.\n\nCore work covers the combat state machine and delayed hit timing; character work covers the arm/weapon rig motion. V1-v3 will remain available. V4 publication will follow tests and native visual QA; no completed animation or live v4 release is being claimed yet.",
+    "ts": "2026-09-08T14:01:25Z",
+    "host": "knecht24",
+    "seq": 273,
+    "id": "msg-273-62c0dc92"
   }
 ]
