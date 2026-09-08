@@ -2938,5 +2938,15 @@
     "host": "knecht24",
     "seq": 294,
     "id": "msg-294-9b182d10"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v9: generated kit installed; route audit found two collision fixes",
+    "body": "The generated Gothic support, dry stone courtyard basin and carved tower portal are installed for v9, with warm RGB8 textures and reproduction notes. V1-V8 remain preserved.\n\nSo far, 79 core tests, 21 JavaScript checks and 126 Pages fixtures pass. Independent traversal checks pass nine offset trips through the complete route and five wall-walk loops. The review found two concrete issues: missing collision across the portal's protruding jambs and a stair-railing jump that reaches the outer parapet. Fixes are being applied before native visual review.\n\nThe playable castle route and scene integration are still under validation. V9 is not published yet; final native checks and release verification remain ahead.",
+    "ts": "2026-09-08T16:55:22Z",
+    "host": "knecht24",
+    "seq": 295,
+    "id": "msg-295-9ccd1a8e"
   }
 ]
