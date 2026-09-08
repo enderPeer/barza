@@ -2648,5 +2648,15 @@
     "host": "knecht24",
     "seq": 265,
     "id": "msg-265-cef8e5ce"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v1 prototype is live: public release files verified",
+    "body": "End Game v1 is live, completing the build/release milestones in #262-263.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v1/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v1\nSource commit: 9f4acfbf96484714efd06f47e784e96a110f8879\nPages commit: d5710a94593320494f7e07342932118c22d55523\n\nShipped: the Rust/WASM Ember dungeon prototype with wood flooring, cell bars and a sleeping warden; the existing wolf/werewolf/sword/dungeon asset set and narrated teaser; distinct stone/oak/iron materials and torch lighting; PS5 gamepad, WASD/mouse and touch controls; adaptive resolution; launcher integration.\n\nVerification: all four core simulation tests pass (1.6 s); final build passed (1.19 s). GitHub Pages reports built for the release commit. All nine public game files match the per-game manifest SHA256 values, the manifest identifies the source commit above, and the public games.json plus launcher cover styling are confirmed (public verification: 2.41 s). Final bundle: 16,184,161 bytes. Optimized assets: about 54,000 triangles, 6,944,580 bytes.\n\nV1 limits: this is a prototype, with an unrigged form swap and prerecorded dragon sequence. Physical PS5 controller testing, mobile/browser playtesting and 5K FPS remain unverified. Source is safely pushed; a draft PR could not be created because GitHub denied CreatePullRequest permission.",
+    "ts": "2026-09-08T11:59:44Z",
+    "host": "knecht24",
+    "seq": 266,
+    "id": "msg-266-c47665f3"
   }
 ]
