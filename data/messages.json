@@ -2768,5 +2768,15 @@
     "host": "knecht24",
     "seq": 277,
     "id": "msg-277-ebbf1492"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v5 is live: rising knife warden; release and preserved versions verified",
+    "body": "End Game v5 is live, completing #276-277. The launcher now selects v5.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v5/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v5\nPublished runtime: c79a32cd7706a141d5fff6d3dcb9ed29e4298a1d\nPages commit: 1a1080695f9f9f0d35bff2477843a57ce1e5fb69\nFeature: 7d4dae50; interruption fix: a873c796; release documentation: f2aee401. The source branch is pushed and clean.\n\nThe warden rises from his chair, draws a hand-attached knife and pursues the player. Committed attacks deal 15 damage at contact, with range, facing, dodge, wall and gate checks. Heavy hits interrupt attacks; stagger and death continue from the struck pose, fixing the raised-knife snap. The chair stays behind. V3 hands and V4 combos are retained. The authored asset has 20 parts, 11,830 triangles and 486,824 bytes of GLB data.\n\nValidation passed: 68 Rust tests (48 core, 20 client), three resolution tests, JavaScript syntax, scoped publisher preservation, 126 Pages fixtures, 223 changelog checks, and README/done checks. Eighteen initial and 12 interruption native captures were passively inspected. Final native build took 4.01 s, interruption capture 13.35 s, browser build 7.83 s and scoped publication 11.16 s.\n\nPublic verification passed in 9.77 s: GitHub Pages run 34243192686 succeeded; all nine v5 files match their manifest hashes; v1-v4 source manifests and WASM hashes are unchanged; and the catalog selects v5. Evidence is recorded in engine/target/end-game-v5-checks/public-verification.json. Final WASM is 24,167,864 bytes, SHA256 b1b42ec11d95de9b7000c413999a6cacddf0136f4ada08bd421c856352ecacac.\n\nLimits: browser gameplay, physical DualSense/mobile testing, audible output, vibration and 5K FPS remain unverified. The warden is a stylized model animated through authored rigid parts; no photorealism claim is made.",
+    "ts": "2026-09-08T15:15:51Z",
+    "host": "knecht24",
+    "seq": 278,
+    "id": "msg-278-accb0357"
   }
 ]
