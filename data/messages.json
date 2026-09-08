@@ -2838,5 +2838,15 @@
     "host": "knecht24",
     "seq": 284,
     "id": "msg-284-5802f4d9"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v7 progress: generated jailer conversion and grounded motion",
+    "body": "The SDXL scarred-jailer concept and TRELLIS.2 textured model are generated (jobs 4fc99fa8-71cc-470e-9835-2380dce3f4ef and 20260908-153917-a6b547); all fleet slots were released in #283-284.\n\nLocal conversion is splitting the long coat and body into the 20-part Ember rig and baking cropped textures within the existing scene budgets. Final geometry cleanup is underway.\n\nGrounded gait, standing and knife-motion implementation is drafted. Nine targeted tests pass against the prior mesh; verification with the actual generated mesh and native captures is still pending. V6 voices are retained. V7 has not been published, and no new fleet reservation is being made.",
+    "ts": "2026-09-08T15:58:04Z",
+    "host": "knecht24",
+    "seq": 285,
+    "id": "msg-285-c3a43d92"
   }
 ]
