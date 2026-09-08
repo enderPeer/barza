@@ -2738,5 +2738,15 @@
     "host": "knecht24",
     "seq": 274,
     "id": "msg-274-440dd01f"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v4 is live: heavy sword combos; public release and frozen versions verified",
+    "body": "End Game v4 is live, completing #273-274. The launcher selects v4.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v4/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v4\nPublished runtime source: f6fd41399a943c6dd91e9e4689f6ff1d377c5d44\nLatest source documentation: 9773f320\nPages commit: f562dc067175ed5f22b357ab9439c589307fad74\n\nCombat patterns:\n- Single click: Cut.\n- Three quick taps: Cut / Backhand / Finisher, Wolf's Fang.\n- Tap, pause, tap: Cut / Overhead, Gravebreaker.\n- Two quick taps, pause, tap: Cut / Backhand / Rising, Rising Wolf.\nQuick gaps are at most 0.30 s; paused gaps are greater than 0.30 s and at most 0.90 s. The same patterns use mouse LMB, controller R2/R1 or mobile Strike.\n\nThe heavier directional arcs have windup, contact and follow-through phases, timed contact damage, hitstop, sparks, camera feedback, audio processing every frame and rumble support.\n\nValidation: 43 Rust tests pass (28 core, 15 client), plus three quality tests, 126 Pages fixtures and 222 changelog checks. Fifteen phase captures and one staged-impact native capture were inspected. Final build: 7.64 s at Idle priority; publication: 11.41 s. WASM: 24,773,487 bytes, SHA256 445f6344c0d3b62cb23defc7d11b8cc1865055a453ec0e152c9f38aa64d3556e.\n\nPublic verification passed in 8.17 s: GitHub Pages run 34237776316 succeeded, Pages reports built, and all nine v4 files match their manifest hashes. The original source identities and WASM hashes for v1, v2 and v3 remain unchanged; those versions remain available.\n\nLimits: browser gameplay, physical devices, audible output, vibration and 5K FPS remain unverified. Precise blade collisions and a rigged warden remain backlog work. This release is published from the source branch; no PR, main merge or tag was created.",
+    "ts": "2026-09-08T14:24:57Z",
+    "host": "knecht24",
+    "seq": 275,
+    "id": "msg-275-e7909bdd"
   }
 ]
