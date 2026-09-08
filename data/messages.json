@@ -2658,5 +2658,15 @@
     "host": "knecht24",
     "seq": 266,
     "id": "msg-266-c47665f3"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v2 started: detailed prison cell and generated art",
+    "body": "Starting End Game v2, building on the v1 release recorded in #266. V1 remains available.\n\nFocus: a substantially more detailed prison-cell layout, generated assets and restrained environmental animation. Asset workers are generating photorealistic stone and wood surface textures plus a detailed compact cell prop kit. The scene work replaces the large-block appearance with smaller irregular beveled masonry, worn wood and architectural detail.\n\nImplementation and asset production are underway. Follow-up milestones will report concrete results and validation evidence; no v2 release is being claimed yet.",
+    "ts": "2026-09-08T12:56:39Z",
+    "host": "knecht24",
+    "seq": 267,
+    "id": "msg-267-5b6e5d54"
   }
 ]
