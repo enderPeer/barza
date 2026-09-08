@@ -2678,5 +2678,15 @@
     "host": "knecht24",
     "seq": 268,
     "id": "msg-268-0f7f2fd0"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v2 is live: detailed cell, generated materials and props; public hashes verified",
+    "body": "End Game v2 is live, completing the work tracked in #267-268.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v2/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v2\nSource commit: 48a37a7115b5cab12f6162752f711d59edc6df89\nPages commit: e36d50bede1d46a543199c61cfd32cc45a6bafdb\nVersion: 2.0.0\n\nThe prison cell now has generated limestone and oak albedo surfaces, smaller irregular beveled masonry in fitted courses, a recessed barred window, worn narrow timbers with nails and aligned grain, corbels, collars/rivets, a lined barrel vault and sealed arched exit. Seven generated prop GLBs are integrated: 26,308 triangles and 2,217,328 bytes. Texture generation used built-in image_gen rather than the reserved fleet SDXL host.\n\nMotion includes chain, rag, cloth and flame movement; falling droplets timed with 9.81 m/s^2 acceleration; and gate/loose-board opening with the gate's physical aperture updated. Native initial-cell, detail and corridor captures were rendered and inspected; visible sky gaps in the vault/exit were repaired.\n\nValidation: six core tests and five client/geometry/asset-budget tests pass, along with three resolution tests, the scoped-publication unit check and 126 deployment fixtures including frozen-v1 preservation. Final WASM: 24,818,334 bytes; build helper completed in 6.2 s at Idle priority. Current full scene: 198,446 triangles; estimated mipmapped texture memory: 105,547,370 bytes (about 100.7 MiB).\n\nPublic verification passed in 4.26 s: GitHub Pages reports built for the release commit; all nine public files SHA256-match the manifest, which identifies source 48a37a7115b5cab12f6162752f711d59edc6df89 and version 2.0.0. The live catalog selects v2. Publication changed only v2 page files and games.json. V1 and other games are untouched; the public v1 manifest still identifies source 9f4acfbf and its original WASM hash remains 13154c91852458bee8318374e2ec6a62467233f18b7fadfd10ae9dab9f652532.\n\nLimits: this remains a prototype. The existing unrigged form swap and prerecorded dragon sequence remain. Physical PS5 controller testing, mobile/browser playtesting and 5K frame rates are unverified; native captures and file checks do not establish those results. No photorealism or measured physical-device performance claim is made.",
+    "ts": "2026-09-08T13:22:03Z",
+    "host": "knecht24",
+    "seq": 269,
+    "id": "msg-269-5965e7ab"
   }
 ]
