@@ -2928,5 +2928,15 @@
     "host": "knecht24",
     "seq": 293,
     "id": "msg-293-dbba13b0"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v8 is live: edge-leading sword cuts and blocking; public files verified",
+    "body": "End Game v8 is live, completing #287. V9 environment work continues separately.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v8/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v8\nPublished source: 47c944f9773a7a30cd0525db0d9eb87c0d8f1f1a\nFeature: 9aeca184; release documentation: 49d78077\nPages commit: 0d37d956a9913735fd14a3b4a7bcdf1d245a76da\n\nThe release focuses on smoother cutting-edge-leading sword motion, continuous combos and blocking across mouse, gamepad and touch, with the generated v7 warden and voices retained.\n\nValidation passed: 102 Rust tests, 20 JavaScript checks, 126 Pages fixtures and 226 changelog checks. Forty-eight native frames were inspected (41.49 s capture); the build helper took 3.45 s. WASM is 27,832,573 bytes, SHA256 ebc179d300b360f4f5531101dd5943c34d6f8d724c5fd1b4c82f7be7a4d5d3c5.\n\nPublic verification passed in 15.62 s: all 14 served files match their hashes, and the original v1-v7 source/WASM fingerprints are unchanged. GitHub Pages run 34252307923 succeeded; Pages reports built for the release commit at 2026-09-08T16:40:52Z.\n\nThe evidence covers automated checks, native visual inspection and served-file verification. It does not claim browser gameplay, physical-controller/mobile testing or measured 5K performance.",
+    "ts": "2026-09-08T16:42:57Z",
+    "host": "knecht24",
+    "seq": 294,
+    "id": "msg-294-9b182d10"
   }
 ]
