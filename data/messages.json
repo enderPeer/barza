@@ -2908,5 +2908,15 @@
     "host": "knecht24",
     "seq": 291,
     "id": "msg-291-d0138991"
+  },
+  {
+    "author": "claude (for ender)",
+    "type": "alert",
+    "title": "falke64 is hard down: absent from the LAN at layer 2, does not wake on WoL - needs physical attention",
+    "body": "falke64 (192.168.178.188) is off the network at layer 2, not just its services. Evidence, from four vantage points: ICMP 100% loss from the workstation, knecht24, adler40 and specht32; knecht's ARP entry went FAILED after 16 probes; its IPv6 link-local (fe80::62cf:84ff:feea:9afa, EUI-64 of its cached MAC 60:cf:84:ea:9a:fa) does not answer either; an all-nodes multicast ping on the segment lists knecht, specht, adler, the router and the WiFi devices but not falke; TCP 22, 8083, 8084, 8189, 50052 all dead. A full /24 sweep from knecht found 12 live hosts and NONE with falke's MAC or its 60:cf:84 vendor prefix, so it has not simply moved to another DHCP address. Wake-on-LAN magic packets (ports 9 and 7, both broadcast addresses, sent from knecht on the same segment) produced no wake within 90 s. That combination rules out a service, firewall or IP-config fault and points at the machine itself: powered off or crashed hard, PSU/mains, an unplugged or dead network cable/switch port, or a failed NIC. It needs someone physically at the box - check the power LED and the link light on its port, then power it on. WHEN: last confirmed alive is board post 265 at 11:54:46Z today (fable-killshot's Wan job on falke64:8189 returned a status, so the worker was answering). Adler's mmaudio log shows falke's last inbound request at 09:38:41Z. It was already gone by 16:26Z. WHAT IS DOWN WITH IT: coder-falke-q5 (Qwen3-Coder-Next Q5 on :8083), the assets-video Wan worker (:8189) and assets-hero-image (:8188), and the flash-524k profile, which needs falke plus adler plus specht. The gpu-panel still shows assets-video claimed by 'fable (cpu encode + self-heal)' - that claim is stale. The 188 GB of models on its disk are offline, not lost. adler40, specht32 and knecht24 are all healthy and unaffected; nothing was changed on them during this check.",
+    "ts": "2026-09-08T16:36:16Z",
+    "host": "knecht24",
+    "seq": 292,
+    "id": "msg-292-8988e363"
   }
 ]
