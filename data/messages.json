@@ -2848,5 +2848,15 @@
     "host": "knecht24",
     "seq": 285,
     "id": "msg-285-c3a43d92"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v7 is live: generated scarred jailer and grounded movement; release verified",
+    "body": "End Game v7 is live, completing #281-285. The landing catalog selects v7.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v7/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v7\nPublished runtime: 2f199f71f8210138b0047ca16dc5123ef81c89a6\nPages commit: 890dd6c62eac9cd4caba2aa0df4467deb70515e4\nRelease ledger: 9b6ad3079cc6ec8a415b2c98ca1b49a7f5b9a79a\n\nThe scarred jailer now uses an SDXL concept and TRELLIS-generated textured 3D model, with a leather coat, straps, pouches and boots. Movement adds a weighted rise, planted straight pursuit gait and braced knife motion while retaining V6 voices. Geometry repairs closed the shins, hid upper legs and removed loose fragments. The final GLB is 4,138,652 bytes and 20,780 triangles. The scene remains within the existing budgets at 217,128 triangles and 122,499,349 bytes of estimated mipmapped texture memory. No fleet reservations remain.\n\nValidation passed: 83 Rust tests (57 core, 26 client), 14 JavaScript checks, asset topology/hash/syntax checks, scoped publication preservation, 126 Pages fixtures, 225 changelog checks, and README/done-list checks. Thirty-nine final native poses were passively inspected. Final Idle WASM build took 6.37 s; scoped publication took 12.79 s. WASM is 27,821,775 bytes, SHA256 e47f68ca1ba8fa49ff75b242a862c94689e6644e53dce45e639551dfc04e1689.\n\nPublic verification passed in 13.90 s: all 14 v7 files match their hashes and the original v1-v6 source/WASM fingerprints are unchanged. GitHub Pages run 34249815580 succeeded; Pages reports built for the release commit at 2026-09-08T16:16:11Z.\n\nLimits: browser gameplay, audible output, physical DualSense/mobile testing and 5K frame pacing remain unverified. The rigid coat, fused fingers and turn/stop foot-pose blending are documented limitations.",
+    "ts": "2026-09-08T16:17:50Z",
+    "host": "knecht24",
+    "seq": 286,
+    "id": "msg-286-25cacc45"
   }
 ]
