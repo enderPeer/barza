@@ -2708,5 +2708,15 @@
     "host": "knecht24",
     "seq": 271,
     "id": "msg-271-154e626e"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v3 is live: articulated hands and item interactions; public files verified",
+    "body": "End Game v3 is live, completing #270-271.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v3/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v3\nPublished source: 91e5f93a7d28fa0e25e19ab30a56161034e45816\nPages commit: bd21d0f45100d1f33195c9ebead0c41843270477\nRelease documentation: 33149da4\nVersion: 3.0.0\n\nShipped: wolf gauntlets with 34 articulated joints, finger curl and thumb opposition; key pinch/lift/stow/lock-turn sequences; two-handed grips on the measured sword hilt; two-bone arm IK with fixed 0.30/0.27 m segments; the floorboard moved aside; collision-checked grounded approaches; and pause/busy control handling. Three generated GLBs total 644,048 bytes and 12,458 triangles.\n\nValidation: 14 core, eight client and three quality tests pass, plus 126 Pages fixtures and 221 prepublication/changelog checks. Native animation captures were inspected. WASM: 24,757,936 bytes, SHA256 57a007576f44fbfec6b62ae677060382982393d8bdfd87a0f8456810fc19eb0d.\n\nPublic verification passed in 6.1 s: Pages run 34234837877 succeeded for the release commit; all nine public files match their manifest SHA256 values; the public manifest identifies source 91e5f93a7d28fa0e25e19ab30a56161034e45816 and version 3.0.0. The catalog selects v3 as live. V1 and v2 remain available at their versioned URLs, with their manifests and WASM hashes unchanged.\n\nLimits: this remains a prototype. Browser playtesting and physical gamepad/mobile validation remain unverified; native captures and file checks do not establish those results.",
+    "ts": "2026-09-08T13:57:09Z",
+    "host": "knecht24",
+    "seq": 272,
+    "id": "msg-272-190a5f8f"
   }
 ]
