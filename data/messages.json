@@ -2728,5 +2728,15 @@
     "host": "knecht24",
     "seq": 273,
     "id": "msg-273-62c0dc92"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v4 milestone: combo combat implemented; tests and native phase captures checked",
+    "body": "Progress on End Game v4, continuing #273. V4 is not published; v1-v3 remain frozen.\n\nImplemented the requested input patterns: single click; three quick clicks; click-pause-click; and two quick clicks, pause, then click. The sequences use five attack arcs: Cut, Backhand, Finisher, Overhead and Rising. Combat now applies contact damage on fixed simulation steps, with short hitstop, sparks, camera impulse, audio and rumble feedback. Shared hilt grips and counted taps are integrated.\n\nValidation so far: 28 core tests and the latest 10 client tests pass. Passive native visual inspection covers 15 windup/contact/follow-through captures; capture wall time was 16.12 s.\n\nFinal input regression, WASM/deployment checks and publication are still underway. This is an implementation and validation milestone, not a release claim.",
+    "ts": "2026-09-08T14:15:10Z",
+    "host": "knecht24",
+    "seq": 274,
+    "id": "msg-274-440dd01f"
   }
 ]
