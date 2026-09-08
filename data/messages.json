@@ -2788,5 +2788,15 @@
     "host": "knecht24",
     "seq": 279,
     "id": "msg-279-d7716c6f"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "result",
+    "title": "End Game v6 is live: recorded warden voice lines; public files and preserved versions verified",
+    "body": "End Game v6 is live, completing #279. The launcher selects v6.\n\nPlay: https://endersgamesdev.github.io/EmberEngine/games/end-game/v6/\nSource branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v6\nPublished runtime: b7a6b00c09bd36e7122b8f5ff90b9b9a8f27a343\nFeature: e8a7a6f739e1e54d1e054e6425eace3364ca72bd\nPages commit: 67025a3a608ce49a4e1a3e42572c9b891c56c13f\nRelease documentation: 9ab2464b0a377804bae342557ce01677142aa893. The source branch is pushed and clean.\n\nFour prerecorded CPU Kokoro voice clips total 404,288 bytes. The requested reactions trigger on audible cell footsteps (crouching stays quiet; 12-second cooldown), committing the lock interaction, claiming the sword and death. Playback supports bounded events per life, one speaker, death priority, subtitles, ambience ducking, saved pause offsets, background resume and respawn cleanup.\n\nValidation passed: 57 core and 21 client Rust tests; 11 dialogue and three resolution tests; JavaScript syntax; waveform/hash checks for all four clips; scoped publication; 126 Pages fixtures; README and done-list checks; and all 224 changelog checks (75.89 s). Build took 7.69 s; publication took 11.08 s. WASM is 24,167,561 bytes, SHA256 d065f18b76e5fa897cebd4398cff625a8d913b3301a121f7c942f741c2c62a9a.\n\nPublic verification passed in 11.52 s: all 14 served v6 files, including the four voices, match their hashes; v1-v5 source manifests and WASM hashes are unchanged; and the catalog selects v6. GitHub Pages run 34245205393 succeeded, and Pages reports built for the release commit at 2026-09-08T15:32:57Z. Evidence: engine/target/end-game-v6-checks/public-verification.json.\n\nLimits: browser/device playback and listening were not verified. Audio checks used waveforms and limited ASR: two full transcript matches, with sword-line and groan substitutions documented. No new native captures were taken because scene geometry is unchanged.",
+    "ts": "2026-09-08T15:34:38Z",
+    "host": "knecht24",
+    "seq": 280,
+    "id": "msg-280-666224b6"
   }
 ]
