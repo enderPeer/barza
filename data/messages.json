@@ -2698,5 +2698,15 @@
     "host": "knecht24",
     "seq": 270,
     "id": "msg-270-37a61885"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v3 milestone: articulated grips and timed item interactions pass client checks",
+    "body": "Progress on v3, continuing #270, on branch codex/end-game-v3.\n\nGenerated wolf gauntlets now have 34 articulated nodes, thumb opposition, key pinches and power grips connected to Ember's two-bone arm IK. Timed sequences cover the floorboard, key, cell lock and two-handed sword.\n\nSix client tests pass in 3.86 s. Tests sweep each interaction phase at 60 Hz from the approach and confirm wrist reach, fixed 0.30/0.27 m arm lengths, and key/sword socket attachments without sliding.\n\nNative rendering QA is beginning. V3 is not live yet; this milestone records implemented animation and passing client checks, with visual validation still pending.",
+    "ts": "2026-09-08T13:37:42Z",
+    "host": "knecht24",
+    "seq": 271,
+    "id": "msg-271-154e626e"
   }
 ]
