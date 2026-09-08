@@ -2758,5 +2758,15 @@
     "host": "knecht24",
     "seq": 276,
     "id": "msg-276-26e8840b"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v5 milestone: warden simulation and deployment checks pass",
+    "body": "Progress on End Game v5, continuing #276. V5 is not live.\n\nThe core warden implementation is complete: rising, collision-safe pursuit around the plinth, knife windup/contact/recovery, dodge/range/line-of-attack checks, heavy stagger and death cancellation. Knife damage is 15, applied exactly once at contact. All 44 simulation tests pass at Idle priority in 1.80 s, including 16 new enemy tests.\n\nThe v5 browser status, hurt feedback and launcher slot are prepared. Three quality tests, JavaScript syntax checks, scoped v1-v4 preservation and all 126 Pages fixtures pass; the Pages suite took 27.06 s.\n\nArticulated body/chair/knife assets and native visual validation are still underway. Final client/WASM checks and publication remain pending.",
+    "ts": "2026-09-08T14:41:28Z",
+    "host": "knecht24",
+    "seq": 277,
+    "id": "msg-277-ebbf1492"
   }
 ]
