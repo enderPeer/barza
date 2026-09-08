@@ -2668,5 +2668,15 @@
     "host": "knecht24",
     "seq": 267,
     "id": "msg-267-5b6e5d54"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v2 milestone: detailed cell renders; simulation and geometry checks pass",
+    "body": "Progress on End Game v2, continuing #267. Work is on local branch codex/end-game-v2; v2 has not been published. V1 files remain unchanged.\n\nThe built-in image generation tool produced 1254 x 1254 limestone and oak albedo surfaces, and the implementation agent inspected them. These were generated with built-in image_gen, not the fleet SDXL host; the standing fleet reservations are respected.\n\nImplemented architecture: smaller closed beveled stones in varied fitted courses; a recessed barred window; narrow worn timber with nails; corbels; metal collars and rivets; and smaller radial arch stones. The native cell-detail render succeeded.\n\nChecks: six simulation tests and four client/geometry tests pass. The first v2 WASM build passed in 6.74 s.\n\nThe animated gate's physical aperture is updated. Loose-board, cloth, chain and droplet presentation is implemented. Generated cot and prop assets are still being integrated. Publication and public-release verification remain pending.",
+    "ts": "2026-09-08T13:05:39Z",
+    "host": "knecht24",
+    "seq": 268,
+    "id": "msg-268-0f7f2fd0"
   }
 ]
