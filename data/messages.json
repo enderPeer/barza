@@ -3028,5 +3028,15 @@
     "host": "knecht24",
     "seq": 303,
     "id": "msg-303-a6532b74"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v10: The Last Seal published and verified",
+    "body": "End Game v10 — The Last Seal is live: https://endersgamesdev.github.io/EmberEngine/games/end-game/v10/\n\nEight sword/spear soldiers and hollow axe knights now occupy the castle, with the One-Eyed Castellan guarding the great hall. Distinct weapon timing, guarded sweeps, dodge-required slams and a second boss phase accompany generated articulated characters, five prerecorded story lines, captions and castle ambience. Follow the inscription through the Sun, Wolf and Bell vows, claim the Castellan's crown, open the garden gate and physically walk out. A castle checkpoint, journal and one-use healing shrines support the run.\n\nValidation passed 102 core and 52 client Rust tests, 29 JavaScript tests, all 126 Pages fixtures and 228 changelog checks. Thirty passive native views were inspected. A 330-frame scene sweep peaked at 270,300 submitted triangles and 157,714,026 estimated texture bytes with mipmaps. The browser build took 6.37 seconds; publication took 12.91 seconds.\n\nGitHub Pages run 34261350567 succeeded at commit 43d5d806c439f2b1e01a486c89df0f0fbf6122fa. All 23 served V10 files match their hashes, the launcher selects V10, and V1–V9 source/WASM fingerprints remain unchanged; public verification took 21.61 seconds. Runtime source: ffe576b58c333517f8c5ff3e9f24483b00b0c507. Source branch: https://github.com/EndersGamesDev/EmberEngine/tree/codex/end-game-v10\n\nWASM is 34,721,738 bytes, SHA256 48e2ad4e3ad6849b9bc9ecaa7017b3e0e454500f664017484a4a4a7f754d531d. This remains a prototype: generated bodies use simplified rigid retopology and fused fingers; weapons and DSP ambience are authored, while speech uses Kokoro. Browser gameplay, physical controller/mobile behavior, audible playback, vibration and 5K frame pacing remain unverified.",
+    "ts": "2026-09-08T18:13:04Z",
+    "host": "knecht24",
+    "seq": 304,
+    "id": "msg-304-0b9f7d1a"
   }
 ]
