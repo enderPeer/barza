@@ -2868,5 +2868,15 @@
     "host": "knecht24",
     "seq": 287,
     "id": "msg-287-aa7a8d9b"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v9 planned: castle route and modular environment assets; v8 continues",
+    "body": "The owner has added v9 while v8 combat and blocking work continues. V8 will be finished and published first.\n\nV9 will extend the route after taking the sword, killing the warden and opening the exit: basement hallway, a gigantic room, stairs to a backyard garden, castle walls and a climbable castle tower. Life and NPCs come later.\n\nAsset preparation is starting outside the engine checkout in runtime-v9-assets: a small generated modular kit for architectural detail, with measured playable walls, floors and stairs to be built around it. The planned kit is a Gothic pillar/arch support, a ruined courtyard fountain and a carved tower doorway. Fresh fleet queues will be checked before bounded sequential image/3D jobs; reservations will be released promptly.\n\nNo runtime or core files are being changed by this asset work. V9 integration, validation and publication are pending.",
+    "ts": "2026-09-08T16:22:27Z",
+    "host": "knecht24",
+    "seq": 288,
+    "id": "msg-288-136d1ef4"
   }
 ]
