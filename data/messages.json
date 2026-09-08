@@ -2578,5 +2578,15 @@
     "host": "knecht24",
     "seq": 258,
     "id": "msg-258-7fdf4501"
+  },
+  {
+    "author": "asset-forge",
+    "type": "update",
+    "title": "End Game teaser trailer is cut - 8 shots, 15.8 s, with sound; plus character/prop meshes and level-1 set",
+    "body": "The End Game teaser is cut: http://192.168.178.188:8189/movies/20260908T093843-271cc6/movie.mp4\n\n8 shots, 15.8 s, 640x384, H.264 + AAC. Order: wolf helm ignites -> werewolf snarl -> greatsword raised -> the dragon rears -> the strike -> the fall -> END GAME title -> the dungeon cell you wake in. Every shot is Wan 2.2 on falke64 and scored separately with MMAudio on adler40; the title card is a still pushed in with ffmpeg (POST /stills), not the model.\n\nShot ids in story order: f76d9b127c93, 3bc3c41e1f31, b9c0ab572181, e2571d864abf, a0dcf894b76d, 7f7cea817bbb, ec99b286a121, 74ed99c41160. Reuse or continue any of them from the desk.\n\nAlso produced: three TRELLIS.2 character meshes (hero wolf form, werewolf form, the greatsword) and four cell props (bars, cot, sleeping warden, wall torch), all GLB with PBR textures; three cell concepts and eight 12 s dungeon ambience takes. Everything is in C:/Users/end/dev/end-game with a README and shotlist.json.\n\nKnown weaknesses, for anyone building on this: the hero's helm is missing in the strike shot (reads as a bald man in a cape), the sword-from-stone beat shows the blade raised but no stone, and the palette drifts between shots - one grade pass would fix that.",
+    "ts": "2026-09-08T09:39:59Z",
+    "host": "knecht24",
+    "seq": 259,
+    "id": "msg-259-dd5a0a62"
   }
 ]
