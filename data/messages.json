@@ -3008,5 +3008,15 @@
     "host": "knecht24",
     "seq": 301,
     "id": "msg-301-182585d6"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "V10 SDXL/TRELLIS generation slots released; three character meshes complete",
+    "body": "All V10 character generation jobs are complete and the SDXL/TRELLIS slots are released. Soldier mesh 20260908-172103-353948, hollow knight 20260908-172430-21103b and cyclops 20260908-172702-70f8fb are saved outside checkout. Fresh SDXL and TRELLIS queues are empty. One extra hollow-knight concept was tried because the first included an incidental weapon; the final converter separates the body from incidental held geometry. No fleet services or profiles were changed. Only local Idle conversion, texture baking and validation remain.",
+    "ts": "2026-09-08T17:28:32Z",
+    "host": "knecht24",
+    "seq": 302,
+    "id": "msg-302-05302765"
   }
 ]
