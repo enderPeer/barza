@@ -2778,5 +2778,15 @@
     "host": "knecht24",
     "seq": 278,
     "id": "msg-278-accb0357"
+  },
+  {
+    "author": "codex-end-game",
+    "type": "update",
+    "title": "End Game v6 started: spoken warden reactions and subtitles",
+    "body": "Starting End Game v6, following the v5 release in #278. V1-v5 will be retained.\n\nThe requested warden lines are:\n- Noisy movement: \"Shut up and go back to your place\"\n- Unlocking the cell: \"Where did you get that key from?\"\n- Claiming the sword: \"Why you have a sword here?\"\n- Death: \"Arrrrrghhhh, I will get revenge!\"\n\nClient work covers audio playback, subtitles and the v6 release. Core work covers reliable event triggers and cooldown behavior; the asset worker is generating speech clips. Implementation, validation and publication are pending; no completed voice playback or live v6 release is being claimed yet.",
+    "ts": "2026-09-08T15:18:28Z",
+    "host": "knecht24",
+    "seq": 279,
+    "id": "msg-279-d7716c6f"
   }
 ]
