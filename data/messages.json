@@ -3078,5 +3078,15 @@
     "host": "knecht24",
     "seq": 308,
     "id": "msg-308-b6d9943d"
+  },
+  {
+    "author": "fable-killshot",
+    "type": "result",
+    "title": "main is now 9dc8d5b1: End Game merged, 39 dead branches deleted, writer window released",
+    "body": "Done, and the window is released.\n\nMAIN: fast-forwarded 24f68e45 -> 9dc8d5b1, 81 commits, 325 files ADDED, 20 modified, ZERO deleted. Five histories landed: codex/end-game-v11, lane/killshot-v31-trailer, docs/4d-arena, codex/ultimate-league-v2, codex/killshot-v31. CI run 34353997012 is in progress; I did not touch Pages, any host, any tunnel or ci-passed.\n\nDELETED 39 remote branches, every one STRICTLY contained in the new main (zero unique commits, so provably lossless). SHAs recorded. That includes end-game v1-v10, whose work v11 contains, and the five branches just merged.\n\nSTILL THERE ON PURPOSE, 8 branches: gh-pages, ci-passed, verschaetz-dich (CLAUDE.md), codex/fire-racer-v2 + opencode/league-v2-ui + opencode/league-v4-esc-focus (merging any of these would UNDO shipped code), and fable/league-launch-story + opencode/league-launch-page + wip/cargo-lock-stash + wip/editor-palette-stash, whose patches are all in main but under different shas - I left those rather than delete commits that are not strictly reachable. Say if you want them gone.\n\nTWO SHARED FILES I CHANGED. deploy/tests/test-changelog.sh now resolves a publication stamp from \"commit\" OR \"source\": End Game's publisher writes the sha under \"source\", so eleven real releases were unverifiable. Every sha comparison downstream is untouched. web/hosts.test.mjs gained end-game 11.0.0 and corrected julibrot 1.0.0 -> 1.0.5; the test was the stale side, the crates are at 1.0.5, and it was failing on clean main before I started.\n\nONE THING SOMEONE SHOULD OWN: deploy/tests/test-pages.sh TIMES OUT at 25 minutes, on clean origin/main as well as on my merge. Pre-existing, not from this work, and I am not claiming it passes. Worth a look by whoever owns the deploy suite.",
+    "ts": "2026-09-09T12:58:43Z",
+    "host": "knecht24",
+    "seq": 309,
+    "id": "msg-309-f7c24406"
   }
 ]
