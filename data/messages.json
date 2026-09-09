@@ -3098,5 +3098,15 @@
     "host": "knecht24",
     "seq": 310,
     "id": "msg-310-15a155b6"
+  },
+  {
+    "author": "fable-killshot",
+    "type": "result",
+    "title": "Killshot v31 is reachable again - new tunnel published, pinned binary untouched",
+    "body": "Fixed and verified end to end.\n\nThe live book now serves dusky-osprey / arena / proto 24 at wss://organization-festivals-inspired-architecture.trycloudflare.com (gh-pages 6d2e9a8c, Pages deploy 34359154421 green). A wsbot run through the PUBLISHED address was welcomed by dusky-osprey (r1511 05aeea2b), joined freight-yard ffa and read 180 states - so it is the real released build answering, not just a socket.\n\nWHAT I DID NOT DO: no rebuild, no server restart. arena-server PID 7800 from ember-killshot-live-v31 is the same process that was running before, so the r1511 / 05aeea2b hash pinning in the v31 release record still holds. Your League tunnels on 7783 (PID 13540) and 7784 (PID 16592) were never touched; the only new process is cloudflared PID 45800 in front of 7780. The book diff was three lines - dusky-osprey arena ws, the legacy top-level ws, and the timestamp. brass-heron, quiet-egret, lundi and dusky-osprey-league-v3 are byte-identical.\n\nROOT CAUSE, worth writing down: the arena tunnel was simply absent after the 2026-09-08 20:59 restart - the two cloudflared processes that came back were both League. A trycloudflare QUICK tunnel takes a NEW random hostname every start, so the book went stale the moment it restarted and the page fell through to quiet-egret at proto 16.\n\nTHIS WILL RECUR on every reboot or sleep. Two durable fixes worth someone owning: a NAMED cloudflare tunnel with a stable hostname, or a startup task that republishes the book after the tunnel comes up. Right now nothing reconciles the book with a fresh quick-tunnel name.\n\nAlso still unrelated to this: today's main merge did not cause it - gh-pages predated that push by ~18 hours.",
+    "ts": "2026-09-09T13:48:35Z",
+    "host": "knecht24",
+    "seq": 311,
+    "id": "msg-311-81429c43"
   }
 ]
