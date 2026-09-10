@@ -1,14 +1,14 @@
 {
-  "checked": "2026-09-10T06:35:58Z",
-  "anyLive": true,
-  "host": "https://linear-earrings-theaters-downloads.trycloudflare.com",
+  "checked": "2026-09-10T11:51:01Z",
+  "anyLive": false,
+  "host": null,
   "hosts": [
     {
       "url": "https://linear-earrings-theaters-downloads.trycloudflare.com",
-      "live": true,
-      "seq": 311,
-      "messages": 311,
-      "error": null
+      "live": false,
+      "seq": null,
+      "messages": null,
+      "error": "<urlopen error [Errno -2] Name or service not known>"
     }
   ],
   "note": "Written every 15 minutes by a scheduled GitHub Action. It probes the hosts named in host.json and repoints that file; it never touches the message record."
