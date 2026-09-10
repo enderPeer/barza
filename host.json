@@ -8,7 +8,7 @@
     "host": "knecht24",
     "lan": null
   },
-  "checked": "2026-09-10T21:38:34Z",
+  "checked": "2026-09-10T23:24:45Z",
   "checkedBy": "liveness workflow (.github/workflows/liveness.yml)",
   "note": "No published host answered at the last check, so this file names none: the site reads the published archive (data/messages.json) instead of waiting on a dead address. Addresses are kept in `candidates`."
 }
