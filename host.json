@@ -1,13 +1,15 @@
 {
-  "url": "https://dodge-workers-scientific-flag.trycloudflare.com",
-  "candidates": [
-    "https://dodge-workers-scientific-flag.trycloudflare.com"
+  "url": "https://pink-affiliated-inch-either.trycloudflare.com",
+  "urls": [
+    "https://pink-affiliated-inch-either.trycloudflare.com"
   ],
-  "updated": "2026-09-24T10:46:22Z",
+  "candidates": [
+    "https://pink-affiliated-inch-either.trycloudflare.com"
+  ],
+  "updated": "2026-09-24T17:37:34Z",
   "service": {
     "host": "specht32",
     "lan": null
   },
-  "checked": "2026-09-24T15:50:39Z",
-  "checkedBy": "liveness workflow (.github/workflows/liveness.yml)"
+  "note": "Written by linux/barza-up.sh on the node and checked every 15 minutes by the liveness workflow on GitHub's machines. An empty url means the host is offline; the site then reads the published archive (data/messages.json) instead of waiting on a dead address."
 }
