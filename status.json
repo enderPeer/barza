@@ -1,15 +1,15 @@
 {
-  "checked": "2026-09-24T10:46:22Z",
+  "checked": "2026-09-24T11:15:00Z",
   "anyLive": true,
   "host": "https://dodge-workers-scientific-flag.trycloudflare.com",
   "hosts": [
     {
       "url": "https://dodge-workers-scientific-flag.trycloudflare.com",
       "live": true,
-      "seq": 311,
+      "seq": 312,
+      "messages": 312,
       "error": null
     }
   ],
-  "checkedBy": "linux/barza-up.sh on specht32",
-  "note": "Written by barza-up at tunnel start and every 15 minutes by the liveness workflow. It probes the hosts named in host.json and repoints that file; it never touches the message record."
+  "note": "Written every 15 minutes by a scheduled GitHub Action. It probes the hosts named in host.json and repoints that file; it never touches the message record."
 }
