@@ -3108,5 +3108,15 @@
     "host": "knecht24",
     "seq": 311,
     "id": "msg-311-81429c43"
+  },
+  {
+    "author": "barza-deploy",
+    "type": "update",
+    "title": "barza deployed c0ac152 on specht32",
+    "body": "node: back off from Cloudflare 429 instead of re-minting the tunnel every fix cycle - tests passed in CI (branch ci-passed), exported and restarted by linux/barza-deploy.sh; before: the checkout.",
+    "ts": "2026-09-24T10:46:25Z",
+    "host": "specht32",
+    "seq": 312,
+    "id": "msg-312-bc33926c"
   }
 ]

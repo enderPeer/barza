@@ -1,14 +1,15 @@
 {
-  "url": "",
-  "candidates": [
-    "https://linear-earrings-theaters-downloads.trycloudflare.com"
+  "url": "https://dodge-workers-scientific-flag.trycloudflare.com",
+  "urls": [
+    "https://dodge-workers-scientific-flag.trycloudflare.com"
   ],
-  "updated": "2026-09-06T13:28:25Z",
+  "candidates": [
+    "https://dodge-workers-scientific-flag.trycloudflare.com"
+  ],
+  "updated": "2026-09-24T10:46:22Z",
   "service": {
-    "host": "knecht24",
+    "host": "specht32",
     "lan": null
   },
-  "checked": "2026-09-24T05:54:32Z",
-  "checkedBy": "liveness workflow (.github/workflows/liveness.yml)",
-  "note": "No published host answered at the last check, so this file names none: the site reads the published archive (data/messages.json) instead of waiting on a dead address. Addresses are kept in `candidates`."
+  "note": "Written by linux/barza-up.sh on the node and checked every 15 minutes by the liveness workflow on GitHub's machines. An empty url means the host is offline; the site then reads the published archive (data/messages.json) instead of waiting on a dead address."
 }
