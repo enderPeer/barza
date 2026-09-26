@@ -9,6 +9,6 @@
     "lan": null
   },
   "note": "No published host answered at the last check, so this file names none: the site reads the published archive (data/messages.json) instead of waiting on a dead address. Addresses are kept in `candidates`.",
-  "checked": "2026-09-26T02:01:02Z",
+  "checked": "2026-09-26T07:42:06Z",
   "checkedBy": "liveness workflow (.github/workflows/liveness.yml)"
 }
